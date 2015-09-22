@@ -187,16 +187,67 @@ html, body {
 	z-index: 99;
 }
 
+/**************** tear icons  *****************/
+
+.tear {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	border: none;
+	-webkit-border-radius: 80% 0 55% 50%/ 55% 0 80% 50%;
+	border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+	font: normal 100%/normal Arial, Helvetica, sans-serif;
+	color: rgba(0,0,0,1);
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	-webkit transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+}
+.match, .drop, .leaf {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /**************** ABOUT ME PAGE  *****************/
 
 .aboutWrap {
 	background-color: #fc941d;
+}
+.matchFlame1 {
+	width: 40px;
+	height: 40px;
+	background-color: #feffa4;
+}
+.matchFlame2 {
+	width: 25px;
+	height: 25px;
+	background-color: #f1420d;
+	margin-top: -25px;
+}
+.matchStick {
+	width: 5px;
+	height: 20px;
+	background-color: #6b3702;
 }
 
 /**************** PROJECTS PAGE  *****************/
 
 .projectsWrap {
 	background-color: #3496c5;
+}
+.droplet {
+	width: 60px;
+	height: 60px;
+	background-color: #82c9ec;
+	z-index: -1;
+}
+.shine {
+	width: 30px;
+	height: 35px;
+	border-radius: 50%;
+	box-shadow: 5px 5px 0 0 #cceaf9;
+	margin-top: -50px;
+	z-index: 1;
 }
 .projectsRow {
 	margin: 25px;
@@ -210,4 +261,23 @@ html, body {
 
 .contactWrap {
 	background-color: #2faa19;
+}
+.leafBody {
+	width: 50px;
+	height: 50px;
+	background-color: #127700;
+	z-index: -1;
+}
+.stem {
+	width: 5px;
+	height: 10px;
+	background-color: #127700;
+}
+.vein {
+	width: 5px;
+	height: 40px;
+	background-color: #175402;
+	margin-top: -50px;
+	border-radius: 50% 50% 0 0;
+	z-index: 1;
 }
