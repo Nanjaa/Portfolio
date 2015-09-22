@@ -19,12 +19,15 @@
 		margin-left: 35%;
 	}
 	.stream {
-		left: 65%;
+		left: 5%;
 	}
 }
 @media only screen and (min-width: 992px) {
 	.topLeaves {
 		background-color: green;
+	}
+	.stream {
+		left: 15%;
 	}
 }
 @media only screen and (min-width: 1200px) {
@@ -32,6 +35,14 @@
 		background-color: blue;
 	}
 	.stream {
-		left: 75%;
+		left: 25%;
+	}
+}
+@media only screen and (min-width: 1550px) {
+	.topLeaves {
+		background-color: green;
+	}
+	.stream {
+		left: 35%;
 	}
 }

@@ -21,11 +21,12 @@ html, body {
 	z-index: 1;
 }
 .stream {
-	background-color: #3496c5;
-	width: 100px;
+	width: 300px;
 	height: 100%;
-	left: 500px;
-	transform: skew(-10deg);
+	border-radius: 50%;
+	box-shadow: 115px 55px 0 0 #3496c5;
+	margin-left: 250px;
+	margin-top: 40px;
 	z-index: 0;
 }
 .fire {
@@ -137,7 +138,7 @@ html, body {
 	height: 80px;
 	border-radius: 50%;
 	box-shadow: 15px 15px 0 0 #f1420d;
-	margin-left: 35px;
+	margin-left: 30px;
 	margin-top: 40px;
 	z-index: -1;
 }
@@ -177,4 +178,36 @@ html, body {
 	z-index: -3;
 	margin-left: 50px;
 	margin-top: 15px;
+}
+
+.contentWrap {
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	z-index: 99;
+}
+
+/**************** ABOUT ME PAGE  *****************/
+
+.aboutWrap {
+	background-color: #fc941d;
+}
+
+/**************** PROJECTS PAGE  *****************/
+
+.projectsWrap {
+	background-color: #3496c5;
+}
+.projectsRow {
+	margin: 25px;
+}
+.project {
+	border: 1px solid black;
+	margin-bottom: 25px;
+}
+
+/**************** CONTACT ME WRAP  *****************/
+
+.contactWrap {
+	background-color: #2faa19;
 }
