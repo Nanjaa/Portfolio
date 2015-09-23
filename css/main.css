@@ -4,6 +4,12 @@
 .wrap {
 	position: relative;
 }
+.relative {
+	position: relative;
+}
+.fixed {
+	position: fixed;
+}
 html, body {
 	height: 100%;
 }
