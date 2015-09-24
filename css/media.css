@@ -2,13 +2,47 @@
 	.topLeaves {
 		background-color: red;
 	}
+	.treesWrap {
+		background-color: #66b04c;
+		width: 100%;
+		height: 100%;
+	}
+	.sky {
+		background-image: linear-gradient(#0DBCF1, #f3fcff);
+		width: 100%;
+		height: 240px;
+		z-index: 1;
+	}
+	.stream {
+		width: 300px;
+		height: 100%;
+		border-radius: 50%;
+		box-shadow: 115px 55px 0 0 #3496c5;
+		margin-left: 250px;
+		margin-top: 40px;
+		z-index: 0;
+	}
+	.fire {
+		left: 70%;
+		z-index: 3;
+	}
+	.tree1 {
+		left: 2%;
+		bottom: 15%;
+		z-index: 2;
+	}
 }
 @media only screen and (min-width: 480px) {
 	.topLeaves {
 		background-color: orange;
 	}
 	.fire {
-		margin-left: 40%;
+		left: 70%;
+	}
+}
+@media only screen and (min-width: 480px) {
+	.fire {
+		left: 50%;
 	}
 }
 @media only screen and (min-width: 780px) {
@@ -16,7 +50,7 @@
 		background-color: yellow;
 	}
 	.fire {
-		margin-left: 35%;
+		left: 45%;
 	}
 	.stream {
 		left: 5%;
@@ -44,5 +78,30 @@
 	}
 	.stream {
 		left: 35%;
+	}
+}
+
+/******************** VERTICAL HEIGHTS ********************/
+
+@media only screen and (min-height: 350px) {
+	.fire {
+		bottom: 5%;
+	}
+}
+@media only screen and (min-height: 500px) {
+	.fire {
+		bottom: 5%;
+	}
+	.tree1 {
+		bottom: 15%;
+	}
+}
+
+@media only screen and (min-height: 1000px) {
+	.fire {
+		bottom: 35%;
+	}
+	.tree1 {
+		bottom: 52%;
 	}
 }
