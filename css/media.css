@@ -39,8 +39,11 @@
 	}
 	.fullPic {
 		width: 50%;
-		margin-top: 25px;
+		margin: 25px;
 		border: 1px solid black;
+	}
+	.projectSlideshow {
+		float: left;
 	}
 }
 @media only screen and (min-width: 1200px) {
