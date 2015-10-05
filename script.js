@@ -16,11 +16,11 @@ $(document).ready(function() {
 
 	function sunset() {
 		$('.sunset').fadeIn(1000);
+		$('.darknessWrap').fadeIn(4000);
 		$('.sunset').animate({
 			marginTop: '0'				
 		}, 2000, 'linear', function() {
 			$('.nightSky').fadeIn(1000);
-			$('.darknessWrap').fadeIn(1000);
 		});
 	}
 	var wait = setInterval(function() {
