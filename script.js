@@ -10,7 +10,7 @@ $(document).ready(function() {
 	// 	});
 	// 	console.log('hello');
 	// });
-	$('a').mouseleave(function() {
-		$(this).css('color', 'pink');
-	});
+	// $('a').mouseleave(function() {
+	// 	$(this).css('color', 'pink');
+	// });
 });
