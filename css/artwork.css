@@ -288,7 +288,16 @@
 	margin-left: -12px; 
 	z-index: -2;
 }
-
+.flameLight {
+	height: 110px;
+	width: 75px;
+	border-radius: 50%;
+	box-shadow: 0 0 45px 50px #fff8a4;
+	left: -30px;
+	top: -145px;
+	z-index: 0;
+	display: none;
+}
 .contentWrap {
 	text-align: center;
 	padding-top: 50px;
