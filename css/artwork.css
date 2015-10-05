@@ -1,3 +1,28 @@
+
+/**************** ALL THE SKIES *****************/
+
+.sky {
+	background-image: linear-gradient(#0DBCF1, #f3fcff);
+	width: 100%;
+	height: 240px;
+	z-index: 1;
+}
+.sunset {
+	background-image: linear-gradient(#01252f, #3f024b, #f6551e, #f6b71e);
+	width: 100%;
+	height: 500px;
+	display: none;
+	margin-top: -260px;
+	z-index: 2;
+}
+.nightSky {
+	background-image: linear-gradient(#01252f, #33023c);
+	width: 100%;
+	height: 240px;
+	display: none;
+	z-index: 3;
+}
+
 /**************** TREE 1 - ON THE FAR LEFT *****************/
 
 .roots {

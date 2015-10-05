@@ -13,4 +13,17 @@ $(document).ready(function() {
 	// $('a').mouseleave(function() {
 	// 	$(this).css('color', 'pink');
 	// });
+
+	function sunset() {
+		$('.sunset').fadeIn(1000);
+		$('.sunset').animate({
+			marginTop: '0'				
+		}, 2000, 'linear', function() {
+			$('.nightSky').fadeIn(1000);
+			$('.darknessWrap').fadeIn(1000);
+		});
+	}
+	var wait = setInterval(function() {
+		sunset();
+	}, 1000);
 });
