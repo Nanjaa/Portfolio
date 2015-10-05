@@ -21,9 +21,24 @@ $(document).ready(function() {
 			marginTop: '0'				
 		}, 2000, 'linear', function() {
 			$('.nightSky').fadeIn(1000);
+			var wait2 = setTimeout(function() {
+				sunrise();
+			}, 5000);
 		});
 	}
-	var wait = setInterval(function() {
+	function sunrise() {
+		$('.nightSky').fadeOut(1000);
+		$('.darknessWrap').fadeOut(4000);
+		$('.sunset').animate({
+			marginTop: '-260px'
+		}, 2000, 'linear', function() {
+			$('.sunset').fadeOut(1000);
+			var wait3 = setTimeout(function() {
+				sunset();
+			}, 5000);
+		});
+	}
+	var wait = setTimeout(function() {
 		sunset();
-	}, 1000);
+	}, 5000);
 });
