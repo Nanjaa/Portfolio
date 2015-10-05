@@ -40,9 +40,21 @@ h1 {
 a {
 	font-family: 'Pompiere', cursive;
 }
+h2 {
+	font-family: 'Pompiere', cursive;
+}
 
 /**************** THE OVERALL PICTURE *****************/
 
+.darknessWrap {
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+	opacity: 0.4;
+	position: absolute;
+	z-index: 999;
+	display: none;
+}
 .topLeaves {
 	background-color: red;
 }
@@ -58,6 +70,25 @@ a {
 	height: 240px;
 	z-index: 1;
 }
+.sunsetWrap {
+	width: 100%;
+	height: 240px;
+	overflow: hidden;
+	display: none;
+}
+.sunset {
+	background-image: linear-gradient(#01252f, #3f024b, #f6551e, #f6b71e);
+	width: 100%;
+	height: 500px;
+	z-index: 1;
+}
+.nightSky {
+	background-image: linear-gradient(#01252f, #33023c);
+	width: 100%;
+	height: 240px;
+	z-index: 1;
+	display: none;
+}
 .stream {
 	width: 300px;
 	height: 100%;
@@ -68,7 +99,7 @@ a {
 	z-index: 0;
 }
 .fire {
-	left: 70%;
+	left: 50%;
 	z-index: 3;
 }
 .tree1 {
@@ -90,6 +121,7 @@ a {
 	margin-left: 450px;
 	margin-top: 150px;
 	z-index: 2;
+	display: none;
 }
 
 

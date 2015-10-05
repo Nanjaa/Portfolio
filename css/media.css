@@ -1,28 +1,28 @@
 @media only screen and (min-width: 360px) {
 	.tree1 {
 		left: 2%;
-	}
+	/*}*/
 }
 @media only screen and (min-width: 480px) {
 	.topLeaves {
 		background-color: orange;
 	}
-	.fire {
+/*	.fire {
 		left: 70%;
-	}
+	}*/
 }
 @media only screen and (min-width: 480px) {
-	.fire {
+/*	.fire {
 		left: 50%;
-	}
+	}*/
 }
 @media only screen and (min-width: 780px) {
 	.topLeaves {
 		background-color: yellow;
 	}
-	.fire {
+/*	.fire {
 		left: 45%;
-	}
+	}*/
 	.stream {
 		left: 5%;
 	}

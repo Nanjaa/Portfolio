@@ -63,15 +63,14 @@
 /**************** THE FIRE IN THE MIDDLE  *****************/
 .fireRing {
 	width: 150px;
-	height: 50px;
 	background-color: #986028;
 	border-radius: 50%;
 	margin-left: -63px;
 	margin-top: -25px;
 }
 .rock1 {
-	width: 40;
-	height: 30;
+	width: 40px;
+	height: 30px;
 	background-color: #4b4b4b;
 	border-radius: 50%;
 	margin-left: -15px;
