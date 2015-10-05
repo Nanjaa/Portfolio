@@ -16,6 +16,30 @@ html, body {
 .border {
 	border: 1px solid black;
 }
+.absolute {
+	position: absolute;
+}
+a {
+	color: white;
+	font-size: 25px;
+	text-decoration: none;
+	margin-left: 5px;
+	margin-right: 5px;
+	transition: all .2s ease-in-out;
+}
+a:hover {
+	color: #fffabe;
+	transform: scale(20);
+}
+
+/* Fonts */
+
+h1 {
+	font-family: 'Julius Sans One', sans-serif;
+}
+a {
+	font-family: 'Pompiere', cursive;
+}
 
 /**************** THE OVERALL PICTURE *****************/
 
@@ -26,6 +50,7 @@ html, body {
 	background-color: #66b04c;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 }
 .sky {
 	background-image: linear-gradient(#0DBCF1, #f3fcff);
@@ -62,336 +87,22 @@ html, body {
 	margin-top: 800px;
 }
 .bush1 {
-	margin-left: 500px;
-	margin-top: 500px;
+	margin-left: 450px;
+	margin-top: 150px;
 	z-index: 2;
 }
 
-/**************** TREE 1 - ON THE FAR LEFT *****************/
 
-.roots {
-	width: 0;
-	height: 0;
-	border-left: 100px solid rgba(255, 255, 255, 0);
-	border-right: 100px solid rgba(255, 255, 255, 0);
-	border-bottom: 50px solid #9a3f18;
-	outline: 1px solid transparent;
-	margin-left: 51px;
-}
-.trunk {
-	background-color: #9a3f18;
-	height: 250px;
-	width: 35px;
-	margin-left: 133px;
-	margin-bottom: -50px;
-}
-.bottomLeaves {
-	width: 0;
-	height: 0;
-	border-left: 150px solid rgba(255, 255, 255, 0);
-	border-right: 150px solid rgba(255, 255, 255, 0);
-	border-bottom: 125px solid #175402;
-	outline: 1px solid transparent;
-	margin-bottom: -130px;
-	z-index: -1;
-}
-.lowerMiddleLeaves {
-	width: 0;
-	height: 0;
-	border-left: 135px solid rgba(255, 255, 255, 0);
-	border-right: 135px solid rgba(255, 255, 255, 0);
-	border-bottom: 125px solid #127700;
-	outline: 1px solid transparent;
-	margin-left: 15px;
-	margin-bottom: -75px;
-	z-index: 1;
-}
-.upperMiddleLeaves {
-	width: 0;
-	height: 0;
-	border-left: 115px solid rgba(255, 255, 255, 0);
-	border-right: 115px solid rgba(255, 255, 255, 0);
-	border-bottom: 125px solid #278c04;
-	outline: 1px solid transparent;
-	margin-left: 35px;
-	margin-bottom: -75px;
-	z-index: 2;
-}
-.topLeaves {
-	width: 0;
-	height: 0;
-	border-left: 100px solid rgba(255, 255, 255, 0);
-	border-right: 100px solid rgba(255, 255, 255, 0);
-	border-bottom: 125px solid #2faa19;
-	outline: 1px solid transparent;
-	margin-left: 55px;
-	margin-bottom: -75px;
-	z-index: 3;
-}
+/**************** Navigaton Bar *****************/
 
-/**************** THE FIRE IN THE MIDDLE  *****************/
-.fireRing {
-	width: 150px;
-	height: 50px;
-	background-color: #986028;
-	border-radius: 50%;
-	margin-left: -63px;
-	margin-top: -25px;
-}
-.rock1 {
-	width: 40;
-	height: 30;
-	background-color: #4b4b4b;
-	border-radius: 50%;
-	margin-left: -15px;
-	z-index: -2;
-}
-.rock2 {
-	width: 30px;
-	height: 20px;
-	background-color: #9a9a9a;
-	border-radius: 50%;
-	margin-left: 10px;
-	margin-top: -40px;
-	z-index: -1;
-}
-.rock3 {
-	width: 40px;
-	height: 30px;
-	background-color: #585858;
-	border-radius: 50%;
-	margin-left: 35px;
-	margin-top: -30px;
-	z-index: -2;
-}
-.rock4 {
-	width: 40px;
-	height: 50px;
-	background-color: #787878;
-	border-radius: 50%;
-	margin-left: 70px;
-	margin-top: -40px;
-	z-index: -1;
-}
-.rock5 {
-	width: 40px;
-	height: 30px;
-	background-color: #a1a1a1;
-	border-radius: 50%;	
-	margin-left: 105px;
-	margin-top: -40px;
-	z-index: -1;
-}
-.rock6 {
-	width: 20px;
-	height: 20px;
-	background-color: #4b4b4b;
-	border-radius: 50%;
-	margin-left: 135px;
-	margin-top: -15px;
-	z-index: -1;
-}
-.rock7 {
-	width: 30px;
-	height: 35px;
-	background-color: #838383;
-	border-radius: 50%;
-	margin-left: 145px;
-	margin-top: -10px;
-	z-index: -1;
-}
-.rock8 {
-	width: 40px;
-	height: 30px;
-	background-color: #585858;
-	border-radius: 50%;
-	margin-left: 125px;
-	margin-top: -10px;
-	z-index: 0;
-}
-.rock9 {
-	width: 55px;
-	height: 35px;
-	background-color: #787878;
-	border-radius: 50%;
-	margin-left: 80px;
-	margin-top: -22px;
-	z-index: 0;
-}
-.rock10 {
-	width: 40px;
-	height: 30px;
-	background-color: #a1a1a1;
-	border-radius: 50%;	
-	margin-left: 45px;
-	margin-top: -30px;
-	z-index: 0;
-}
-.rock11 {
-	width: 25px;
-	height: 30px;
-	background-color: #4b4b4b;
-	border-radius: 50%;	
-	margin-left: 25px;
-	margin-top: -37px;
-	z-index: 0;
-}
-.rock12 {
-	width: 20px;
-	height: 15px;
-	background-color: #9a9a9a;
-	border-radius: 50%;	
-	margin-left: 8px;
-	margin-top: -30px;
-	z-index: 0;
-}
-.rock13 {
-	width: 30px;
-	height: 30px;
-	background-color: #787878;
-	border-radius: 50%;	
-	margin-left:-20px;
-	margin-top: -30px;
-	z-index: 0;
-}
-.fire1Wrapper {
-	margin-top: -150px;
-	z-index: 1;
-}
-.log1 {
-	width: 25px;
-	height: 75px;
-	transform: skew(50deg);
-	-webkit-transform: skew(50deg);
-	-moz transform: skew(50deg);
-	-o-transform: skew(50deg);
-	background: #6b3702;
-}
-.log2 {
-	width: 25px;
-	height: 75px;
-	transform: skew(-50deg);
-	-webkit-transform: skew(-50deg);
-	-moz transform: skew(-50deg);
-	-o-transform: skew(-50deg);
-	background: #87521d;
-	margin-bottom: -75px;
-}
-
-.log3 {
-	width: 18px;
-	height: 75px;
-	background-color: #47290a;
-	z-index: -1;
-	margin-bottom: -75px;
-	margin-left: 3px;
-}
-.flame1 {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	box-shadow: 15px 15px 0 0 #f1420d;
-	margin-bottom: -30px;
-	margin-left: -25px;
-	z-index: -1;
-}
-.flame2 {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	box-shadow: -15px 15px 0 0 #fc941d;
-	margin-bottom: -80px;
-	margin-left: -30px;
-	z-index: -1;
-}
-.flame3 {
-	width: 100px;
-	height: 115px;
-	border-radius: 50%;
-	box-shadow: 25px 25px 0 0 #ffc648;
-	margin-bottom: -75px;
-	margin-left: -64px;
-	z-index: -2;
-}
-.flame4 {
-	width: 100px;
-	height: 115px;
-	border-radius: 50%;
-	box-shadow: -30px 15px 0 0 #ffea80;
-	margin-bottom: -115px;
-	margin-left: -8px;
-	z-index: -3;
-}
-.flame5 {
-	width: 50px;
-	height: 100px;
-	background-color: #feffa4;
-	border-radius: 50%;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	margin-bottom: -115px;
-	margin-left: -12px; 
-	z-index: -2;
-}
-
-.contentWrap {
+.navWrap {
+	width: 100%;
+	background-color: gray;
+	margin-top: 275px;
+	opacity: 0.8;
 	text-align: center;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	width: 100%;
 	z-index: 99;
-}
-
-/**************** BUSH *****************/
-
-.bushBranch1 {
-	color: #278c04;
-	height: 15px;
-	width: 15px;
-}
-.bushBranch2 {
-	
-}
-.bushBranch3 {
-	
-}
-.bushBranch4 {
-	
-}
-.bushBranch5 {
-	
-}
-.berry {
-
-}
-.berry1 {
-
-}
-.berry2 {
-	
-}
-.berry3 {
-	
-}
-.berry4 {
-	
-}
-.berry5 {
-	
-}
-.berry6 {
-	
-}
-.berry7 {
-	
-}
-.berry8 {
-	
-}
-.berry9 {
-	
-}
-.berry10 {
-	
 }
 
 /**************** tear icons  *****************/
@@ -516,3 +227,4 @@ html, body {
 .contactBox {
 	background-color: #58bb46;
 }
+
