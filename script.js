@@ -1,26 +1,14 @@
 $(document).ready(function() {
 
-	// $('a').mouseenter(function() {
-	// 	$(this).css({
-	// 		'-webkit-transform': 'scale(5)',
-	// 		'moz-transform' : 'scale(5)',
-	// 		'-ms-transform' : 'scale(5)',
-	// 		'-o-transform' : 'scale(5)',
-	// 		'transform' : 'scale(5)'
-	// 	});
-	// 	console.log('hello');
-	// });
-	// $('a').mouseleave(function() {
-	// 	$(this).css('color', 'pink');
-	// });
+	// Reset the go timer so that you can change the time again
 	function waitToGo(timeout) {
 		var wait4 = setTimeout(function() {
 			changeGo = true;
 		}, timeout)
 	}
 
+	// change the css of the button from night to day and vise versa
 	function changeButton(changeToDaytime) {
-		console.log('hello it worked');
 		if(changeToDaytime) {
 			$('.changeTime').css('background-color', '#6dd6f6');
 			$('.iconWrap').css('background-color', '#6dd6f6');
@@ -37,6 +25,7 @@ $(document).ready(function() {
 
 	var changeGo = true;
 
+	// the sunset functions (normal and quick)
 	function sunset() {
 		if(changeGo) {
 			changeGo = false;
@@ -81,6 +70,7 @@ $(document).ready(function() {
 			});			
 		}
 	}
+	// The sunrise functions (normal and quick)
 	function sunrise() {
 		if(changeGo) {
 			changeGo = false;
@@ -125,11 +115,75 @@ $(document).ready(function() {
 			});			
 		}
 	}
+	// Starts the time changing functions
 	var wait = setTimeout(function() {
 		sunset();
 	}, 5000);
+	// If you click the button before the sun automatically sets, it'll stop the automation
 	$('.icon-sun-3').on('click', function() {
 		clearTimeout(wait);
 		quickSet();
+	})
+
+	// scroll through the slideshow
+	// This will keep track of what picture you're on in the slideshow
+	var oshuPicture = 1,
+		marvelPicture = 1;
+
+	// click the left arrow (if it's available)
+	$('.leftArrow').on('click', function() {
+		if($(this).parent().attr('class') === 'projectSlideshow oshu') {
+			if(oshuPicture === 2) {
+				oshuPicture = 1;
+				$('.oshuPreview').attr('src', 'images/oshu1.png');
+				$('.leftArrow').css('border-right', '25px solid #85c0dc');
+			}
+			else if(oshuPicture === 3) {
+				oshuPicture = 2;
+				$('.oshuPreview').attr('src', 'images/oshu2.png');
+				$('.rightArrow').css('border-left', '25px solid #d6eaf3');
+			}
+
+		}
+		else {
+			if(marvelPicture === 2) {
+				marvelPicture = 1;
+				$('.marvelPreview').attr('src', 'images/marvel1.png');
+				$('.leftArrow').css('border-right', '25px solid #85c0dc');
+			}
+			else if(marvelPicture === 3) {
+				marvelPicture = 2;
+				$('.marvelPreview').attr('src', 'images/marvel2.png');
+				$('.rightArrow').css('border-left', '25px solid #d6eaf3');
+			}
+		}
+	})
+	// click the right arrow (if it's available)
+	$('.rightArrow').on('click', function() {
+		if($(this).parent().attr('class') === 'projectSlideshow oshu') {
+			if(oshuPicture === 1) {
+				oshuPicture = 2;
+				$('.oshuPreview').attr('src', 'images/oshu2.png');
+				$('.leftArrow').css('border-right', '25px solid #d6eaf3');
+			}
+			else if(oshuPicture === 2) {
+				oshuPicture = 3;
+				$('.oshuPreview').attr('src', 'images/oshu3.png');
+				$('.rightArrow').css('border-left', '25px solid #85c0dc');
+			}
+
+		}
+		else {
+			if(marvelPicture === 1) {
+				marvelPicture = 2;
+				$('.marvelPreview').attr('src', 'images/marvel2.png');
+				$('.leftArrow').css('border-right', '25px solid #d6eaf3');
+			}
+			else if(marvelPicture === 2) {
+				marvelPicture = 3;
+				$('.marvelPreview').attr('src', 'images/marvel3.png');
+				$('.rightArrow').css('border-left', '25px solid #85c0dc');
+			}
+		}
 	})
 });
