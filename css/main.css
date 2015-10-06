@@ -19,6 +19,11 @@ html, body {
 .absolute {
 	position: absolute;
 }
+.circle {
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0 0 15px 1px white;
+}
 a {
 	color: white;
 	font-size: 25px;
@@ -67,7 +72,6 @@ h2 {
 	display: none;
 }
 .topLeaves {
-	background-color: red;
 }
 .treesWrap {
 	background-color: #66b04c;
@@ -92,7 +96,7 @@ h2 {
 }
 .fire {
 	left: 50%;
-	z-index: 3;
+	z-index: 20;
 }
 .tree1 {
 	bottom: 15%;

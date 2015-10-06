@@ -30,6 +30,137 @@
 	z-index: 3;
 }
 
+/**************** STARS - ROTATE IN THE NIGHT SKY*****************/
+
+.stars {
+	z-index: 999;
+	width: 100%;
+	height: 240px;
+	overflow: hidden;
+}
+.star1 {
+	height: 5px;
+	width: 5px;
+	left: 1%;
+	top: 2%;
+}
+.star2 {
+	height: 2px;
+	width: 2px;
+	left: 33%;
+	top: 41%;
+}
+.star3 {
+	height: 2px;
+	width: 2px;
+	left: 54%;
+	top: 66%;
+}
+.star4 {
+	height: 5px;
+	width: 5px;
+	left: 17%;
+	top: 58%;
+}
+.star5 {
+	height: 5px;
+	width: 5px;
+	left: 79%;
+	top: 80%;
+}
+.star6 {
+	height: 2px;
+	width: 2px;
+	left: 1%;
+	top: 12%;
+}
+.star7 {
+	height: 2px;
+	width: 2px;
+	left: 13%;
+	top: 14%;
+}
+.star8 {
+	height: 3px;
+	width: 3px;
+	left: 55%;
+	top: 21%;
+}
+.star9 {
+	height: 2px;
+	width: 2px;
+	left: 27%;
+	top: 8%;
+}
+.star10 {
+	height: 2px;
+	width: 2px;
+	left: 59%;
+	top: 50%;
+}
+.star11 {
+	height: 5px;
+	width: 5px;
+	left: 71%;
+	top: 62%;
+}
+.star12 {
+	height: 3px;
+	width: 3px;
+	left: 73%;
+	top: 14%;
+}
+.star13 {
+	height: 2px;
+	width: 2px;
+	left: 85%;
+	top: 86%;
+}
+.star14 {
+	height: 3px;
+	width: 3px;
+	left: 57%;
+	top: 68%;
+}
+.star15 {
+	height: 2px;
+	width: 2px;
+	left: 49%;
+	top: 30%;
+}
+.star16 {
+	height: 5px;
+	width: 5px;
+	left: 81%;
+	top: 12%;
+}
+.star17 {
+	height: 2px;
+	width: 2px;
+	left: 33%;
+	top: 84%;
+}
+.star18 {
+	height: 2px;
+	width: 2px;
+	left: 45%;
+	top: 26%;
+}
+.star19 {
+	height: 3px;
+	width: 3px;
+	left: 37%;
+	top: 98%;
+}
+.star20 {
+	height: 3px;
+	width: 3px;
+	left: 39%;
+	top: 50%;
+}
+
+
+
 /**************** TREE 1 - ON THE FAR LEFT *****************/
 
 .roots {
