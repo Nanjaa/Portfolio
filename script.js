@@ -18,6 +18,7 @@ $(document).ready(function() {
 		$('.sunset').fadeIn(1000);
 		$('.darknessWrap').fadeIn(4000);
 		$('.flameLight').fadeIn(4000);
+		$('.stars').fadeIn(4000);
 		$('.sunset').animate({
 			marginTop: '0'				
 		}, 2000, 'linear', function() {
@@ -39,6 +40,7 @@ $(document).ready(function() {
 		$('.sunset').fadeIn(125);
 		$('.darknessWrap').fadeIn(500);
 		$('.flameLight').fadeIn(500);
+		$('.stars').fadeIn(500);
 		$('.sunset').animate({
 			marginTop: '0'				
 		}, 500, 'linear', function() {
@@ -55,6 +57,7 @@ $(document).ready(function() {
 		$('.nightSky').fadeOut(1000);
 		$('.darknessWrap').fadeOut(4000);
 		$('.flameLight').fadeOut(4000);
+		$('.stars').fadeOut(4000);
 		$('.sunset').animate({
 			marginTop: '-260px'
 		}, 2000, 'linear', function() {
@@ -75,6 +78,7 @@ $(document).ready(function() {
 		$('.nightSky').fadeOut(250);
 		$('.darknessWrap').fadeOut(500);
 		$('.flameLight').fadeOut(500);
+		$('.stars').fadeOut(500);
 		$('.sunset').animate({
 			marginTop: '-260px'
 		}, 500, 'linear', function() {
