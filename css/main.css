@@ -37,9 +37,7 @@ a:hover {
 	transform: scale(20);
 }
 i {
-	position: absolute;
 	z-index: 999;
-	padding: 10px;
 	font-size: 25px;
 	cursor: pointer;
 }
@@ -54,6 +52,34 @@ a {
 }
 h2 {
 	font-family: 'Pompiere', cursive;
+}
+
+/**************** THE BUTTON TO CHANGE THE TIME *****************/
+
+.changeTime {
+	box-sizing: border-box;
+	width: 60px;
+	height: 60px;
+	padding: 6px;
+	text-align: center;
+	background-color: #6dd6f6;
+	position: absolute;
+	z-index: 999;
+	margin: 40px;
+	border-radius: 25%;
+	border: 2px solid white;
+}
+.iconWrap {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	background-color: #6dd6f6;
+	border-radius: 25%;
+	border: 1px solid white;
+	color: white;
+}
+.icon-moon-2 {
+	display: none;
 }
 
 /**************** THE OVERALL PICTURE *****************/

@@ -1,13 +1,6 @@
 
 /**************** ALL THE SKIES *****************/
 
-.icon-sun-3 {
-
-}
-.icon-moon-2 {
-	display: none;
-	color: white;
-}
 .sky {
 	background-image: linear-gradient(#0DBCF1, #f3fcff);
 	width: 100%;

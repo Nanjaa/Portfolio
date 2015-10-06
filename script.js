@@ -19,6 +19,22 @@ $(document).ready(function() {
 		}, timeout)
 	}
 
+	function changeButton(changeToDaytime) {
+		console.log('hello it worked');
+		if(changeToDaytime) {
+			$('.changeTime').css('background-color', '#6dd6f6');
+			$('.iconWrap').css('background-color', '#6dd6f6');
+			$('.icon-moon-2').hide();
+			$('.icon-sun-3').show();
+		}
+		else {
+			$('.changeTime').css('background-color', '#5b3462');
+			$('.iconWrap').css('background-color', '#5b3462');
+			$('.icon-sun-3').hide();
+			$('.icon-moon-2').show();
+		}
+	}
+
 	var changeGo = true;
 
 	function sunset() {
@@ -33,11 +49,11 @@ $(document).ready(function() {
 			}, 2000, 'linear', function() {
 				$('.nightSky').fadeIn(1000);
 				waitToGo(1000);
-				$('.icon-sun-3').hide();
-				$('.icon-moon-2').show();
+				changeButton();
 				var wait2 = setTimeout(function() {
 					sunrise();
-				}, 10000);				
+				}, 10000);	
+				// If you click the button to semi-permanently change the time, it will stop the timer
 				$('.icon-moon-2').on('click', function() {
 					clearTimeout(wait2);
 					quickRise();
@@ -57,9 +73,8 @@ $(document).ready(function() {
 			}, 500, 'linear', function() {
 				$('.nightSky').fadeIn(125);
 				waitToGo(125);
-				$('.icon-sun-3').hide();
-				$('.icon-moon-2').show();
-				
+				changeButton();
+				// If you click the button to semi-permanently change the time, it will stop the timer
 				$('.icon-moon-2').on('click', function() {
 					quickRise();
 				});
@@ -78,8 +93,8 @@ $(document).ready(function() {
 			}, 2000, 'linear', function() {
 				$('.sunset').fadeOut(1000);
 				waitToGo(1000);
-				$('.icon-moon-2').hide();
-				$('.icon-sun-3').show();
+				changeButton(true);
+				// If you click the button to semi-permanently change the time, it will stop the timer
 				var wait3 = setTimeout(function() {
 					sunset();
 				}, 10000);				
@@ -102,8 +117,8 @@ $(document).ready(function() {
 			}, 500, 'linear', function() {
 				$('.sunset').fadeOut(125);
 				waitToGo(125);
-				$('.icon-moon-2').hide();
-				$('.icon-sun-3').show();				
+				changeButton(true);
+				// If you click the button to semi-permanently change the time, it will stop the timer
 				$('.icon-sun-3').on('click', function() {
 					quickSet();
 				});
