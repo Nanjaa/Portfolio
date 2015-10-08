@@ -61,9 +61,7 @@
 /******************** VERTICAL HEIGHTS ********************/
 
 @media only screen and (min-height: 350px) {
-	.fire {
-		bottom: 5%;
-	}
+	
 }
 @media only screen and (min-height: 500px) {
 	.fire {

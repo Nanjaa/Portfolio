@@ -118,7 +118,7 @@ $(document).ready(function() {
 	// Starts the time changing functions
 	var wait = setTimeout(function() {
 		sunset();
-	}, 5000);
+	}, 3000);
 	// If you click the button before the sun automatically sets, it'll stop the automation
 	$('.icon-sun-3').on('click', function() {
 		clearTimeout(wait);
