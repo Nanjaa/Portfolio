@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	// If you refresh, scroll back to the top
+	$(this).scrollTop(0);
 
 	// Reset the go timer so that you can change the time again
 	function waitToGo(timeout) {
