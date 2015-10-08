@@ -186,4 +186,25 @@ $(document).ready(function() {
 			}
 		}
 	})
+
+	// This is the function where the nameplate becomes the header
+
+	$(window).scroll(function() {
+		$('.navWrap').css('top', Math.max(0, 275 - $(this).scrollTop()));
+		// var scroll = $(this).scrollTop(),
+		// 	myHeight = $(window).height();
+		// console.log(scroll + ' and ' + myHeight);
+		// if(scroll => myHeight) {
+		// 	console.log('bigger');
+		// 	$('.navWrap').css('opacity', '1');
+		// }
+		// else if(scroll < myHeight) {
+		// 	console.log('smaller');
+		// 	$('.navWrap').css('opacity', '0.8');
+		// }
+	});
+
+
+
+
 });

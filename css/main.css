@@ -160,11 +160,12 @@ h2 {
 .navWrap {
 	width: 100%;
 	background-color: gray;
-	margin-top: 275px;
 	opacity: 0.8;
 	text-align: center;
 	width: 100%;
+	top: 275px;
 	z-index: 99;
+	position: fixed;
 }
 
 /**************** tear icons  *****************/
@@ -293,4 +294,7 @@ h2 {
 .contactBox {
 	background-color: #58bb46;
 }
-
+.mediaLink {
+	margin-right: 5px;
+	margin-left: 5px;
+}
