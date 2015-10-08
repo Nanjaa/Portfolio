@@ -191,17 +191,18 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 		$('.navWrap').css('top', Math.max(0, 275 - $(this).scrollTop()));
-		// var scroll = $(this).scrollTop(),
-		// 	myHeight = $(window).height();
-		// console.log(scroll + ' and ' + myHeight);
-		// if(scroll => myHeight) {
-		// 	console.log('bigger');
-		// 	$('.navWrap').css('opacity', '1');
-		// }
-		// else if(scroll < myHeight) {
-		// 	console.log('smaller');
-		// 	$('.navWrap').css('opacity', '0.8');
-		// }
+		var scroll = $(this).scrollTop(),
+			myHeight = $(window).height();
+		if(scroll > myHeight) {
+			$('.navWrap').css('opacity', '1');
+			$('h1').css('font-size', '4rem');
+			$('h1').css('margin-bottom', '0');
+		}
+		else if(scroll < myHeight) {
+			$('.navWrap').css('opacity', '0.8');
+			$('h1').css('font-size', '5rem');
+			$('h1').css('margin-bottom', '2rem');
+		}
 	});
 
 
