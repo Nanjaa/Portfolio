@@ -4,27 +4,15 @@
 @media only screen and (min-width: 480px) {
 	.topLeaves {
 	}
-/*	.fire {
-		left: 70%;
-	}*/
+
 }
 @media only screen and (min-width: 480px) {
-/*	.fire {
-		left: 50%;
-	}*/
-}
-/*This is just to display the forest*/
-@media only screen and (min-width: 650px) and (min-height: 500px) {
-	.forest {
-		display: block;
-	}
+
 }
 @media only screen and (min-width: 780px) {
 	.topLeaves {
 	}
-/*	.fire {
-		left: 45%;
-	}*/
+
 	.stream {
 		left: 5%;
 	}
@@ -82,6 +70,24 @@
 		bottom: 35%;
 	}
 	.tree3 {
+		display: block;
+	}
+}
+
+/******************** DISPLAYING THE FOREST ********************/
+
+@media only screen and (min-width: 650px) and (min-height: 500px) {
+	.forest {
+		display: block;
+	}
+}
+@media only screen and (min-width: 900px) and (min-height: 500px) {
+	.forest2 {
+		display: block;
+	}
+}
+@media only screen and (min-width: 1400px) and (min-height: 500px) {
+	.forest3 {
 		display: block;
 	}
 }
