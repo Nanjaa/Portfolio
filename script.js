@@ -192,20 +192,28 @@ $(document).ready(function() {
 	// This is the function where the nameplate becomes the header
 
 	$(window).scroll(function() {
-		$('.navWrap').css('top', Math.max(0, 275 - $(this).scrollTop()));
+		// variables that will be used throughout this function
 		var scroll = $(this).scrollTop(),
 			myHeight = $(window).height();
-		if(scroll > myHeight) {
-			$('.navWrap').css('opacity', '1');
+		// This beginning function acts as a media query, determining where the navbar rests at the beginning 
+		navScroll(scroll, myHeight);
+	});
+
+	function navScroll(scroll, height) {
+		$('.navWrap').css('top', Math.max(0, 275 - scroll));
+		if(scroll > height) {
+			$('.nav').css('opacity', '1');
+			$('.navWrap').css('background-color', 'gray');
 			$('h1').css('font-size', '4rem');
 			$('h1').css('margin-bottom', '0');
 		}
-		else if(scroll < myHeight) {
-			$('.navWrap').css('opacity', '0.8');
+		else if(scroll < height) {
+			$('.nav').css('opacity', '0.8');
+			$('.navWrap').css('background-color', 'transparent');
 			$('h1').css('font-size', '5rem');
 			$('h1').css('margin-bottom', '2rem');
 		}
-	});
+	}
 
 
 

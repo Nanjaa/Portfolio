@@ -53,6 +53,8 @@ i {
 
 h1 {
 	font-family: 'Julius Sans One', sans-serif;
+	text-shadow: #7c7c7c 0 0 5px;
+	font-size: 5rem;
 }
 a {
 	font-family: 'Pompiere', cursive;
@@ -136,8 +138,10 @@ h3 {
 .fire {
 	left: 50%;
 	z-index: 20;
+	bottom: 25%;
 }
 .tree1 {
+	display: none;
 	bottom: 15%;
 	left: -10%;
 	z-index: 5;
@@ -166,13 +170,15 @@ h3 {
 
 .navWrap {
 	width: 100%;
-	background-color: gray;
-	opacity: 0.8;
 	text-align: center;
 	width: 100%;
 	top: 275px;
 	z-index: 99;
 	position: fixed;
+}
+.nav {
+	background-color: gray;
+	opacity: 0.8;
 }
 
 /**************** tear icons  *****************/
