@@ -134,7 +134,7 @@ $(document).ready(function() {
 
 	// click the left arrow (if it's available)
 	$('.leftArrow').on('click', function() {
-		if($(this).parent().attr('class') === 'projectSlideshow oshu') {
+		if($(this).parent().attr('class') === 'noSelect oshu') {
 			if(oshuPicture === 2) {
 				oshuPicture = 1;
 				$('.oshuPreview').attr('src', 'images/oshu1.png');
@@ -162,7 +162,7 @@ $(document).ready(function() {
 	})
 	// click the right arrow (if it's available)
 	$('.rightArrow').on('click', function() {
-		if($(this).parent().attr('class') === 'projectSlideshow oshu') {
+		if($(this).parent().attr('class') === 'noSelect oshu') {
 			if(oshuPicture === 1) {
 				oshuPicture = 2;
 				$('.oshuPreview').attr('src', 'images/oshu2.png');
