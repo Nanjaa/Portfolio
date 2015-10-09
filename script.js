@@ -201,7 +201,6 @@ $(document).ready(function() {
 	});
 
 	function navScroll(scroll, height, minimize) {
-		console.log(minimize);
 		$('.navWrap').css('top', Math.max(0, 275 - scroll));
 		if(scroll > minimize) {
 			$('.nav').css('opacity', '1');
@@ -217,6 +216,14 @@ $(document).ready(function() {
 		}
 	}
 
+	// This is so that when you click on one of the in-page links, you scroll down nicely 
+
+	$('a').on('click', function() {
+		$('html, body').animate({
+			scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+		}, 500);
+		return false;
+	});
 
 
 
