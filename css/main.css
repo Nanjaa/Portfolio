@@ -164,6 +164,11 @@ h3 {
 	z-index: 2;
 	display: none;
 }
+.contentWrap {
+	text-align: center;
+	padding-bottom: 50px;
+	z-index: 1;
+}
 
 
 /**************** Navigaton Bar *****************/
@@ -200,6 +205,9 @@ h3 {
 .match, .drop, .leaf {
 	margin-left: auto;
 	margin-right: auto;
+}
+.titleWrap {
+	margin: 30px;
 }
 
 /**************** ABOUT ME PAGE  *****************/
