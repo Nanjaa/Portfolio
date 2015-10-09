@@ -153,6 +153,51 @@
 	top: 50%;
 }
 
+/***************** THE FOREST ******************************/
+
+.forest {
+	display: none;
+}
+.tree1 {
+	top: 15%;
+	left: 2%;
+	z-index: 5;
+}
+.tree2 {
+	left: 85%;
+	margin-top: 30px;
+	z-index: 5;	
+}
+.tree3 {
+	left: 15%;
+	margin-top: 800px;
+	z-index: 7;
+}
+.tree4 {
+	left: -50px;
+	top: 45%;
+	z-index: 6;
+}
+.tree5 {
+	left: -100px;
+	top: 25%;
+	z-index: 5;
+}
+.tree6 {
+	left: -80px;
+	top: 70%;
+	z-index: 7;
+}
+.tree7 {
+	left: -100px;
+	top: 10%;
+}
+.tree8 {
+	left: -175px;
+	top: 60%;
+	z-index: 6;
+}
+
 
 
 /**************** TREE 1 - ON THE FAR LEFT *****************/

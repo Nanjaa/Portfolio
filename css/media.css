@@ -1,7 +1,5 @@
 @media only screen and (min-width: 360px) {
-	.tree1 {
-		left: 2%;
-	/*}*/
+
 }
 @media only screen and (min-width: 480px) {
 	.topLeaves {
@@ -14,6 +12,12 @@
 /*	.fire {
 		left: 50%;
 	}*/
+}
+/*This is just to display the forest*/
+@media only screen and (min-width: 650px) and (min-height: 500px) {
+	.forest {
+		display: block;
+	}
 }
 @media only screen and (min-width: 780px) {
 	.topLeaves {
@@ -61,30 +65,21 @@
 /******************** VERTICAL HEIGHTS ********************/
 
 @media only screen and (min-height: 250px) {
-	
+
 }
 @media only screen and (min-height: 500px) {
 	.fire {
-	}
-	.tree1 {
-		bottom: 15%;
 	}
 }
 @media only screen and (min-height: 600px) {
 	.fire {
 		bottom: 15%;
 	}
-	.tree1 {
-		bottom: 25%;
-	}
 }
 
 @media only screen and (min-height: 900px) {
 	.fire {
 		bottom: 35%;
-	}
-	.tree1 {
-		bottom: 52%;
 	}
 	.tree3 {
 		display: block;
