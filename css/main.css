@@ -175,6 +175,10 @@ h3 {
 	background-color: gray;
 	opacity: 0.8;
 }
+.jumpPoint {
+	margin-top: -90px;
+	padding-top: 90px;
+}
 
 /**************** tear icons  *****************/
 
