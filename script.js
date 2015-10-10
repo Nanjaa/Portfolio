@@ -201,16 +201,16 @@ $(document).ready(function() {
 	});
 
 	function navScroll(scroll, height, minimize) {
-		$('.navWrap').css('top', Math.max(0, 275 - scroll));
+		$('header').css('top', Math.max(0, 275 - scroll));
 		if(scroll > minimize) {
-			$('.nav').css('opacity', '1');
-			$('.navWrap').css('background-color', 'gray');
+			$('nav').css('opacity', '1');
+			$('header').css('background-color', 'gray');
 			$('h1').css('font-size', '4rem');
 			$('h1').css('margin-bottom', '0');
 		}
 		else if(scroll < minimize) {
-			$('.nav').css('opacity', '0.8');
-			$('.navWrap').css('background-color', 'transparent');
+			$('nav').css('opacity', '0.8');
+			$('header').css('background-color', 'transparent');
 			$('h1').css('font-size', '5rem');
 			$('h1').css('margin-bottom', '2rem');
 		}

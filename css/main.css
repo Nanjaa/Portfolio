@@ -163,7 +163,7 @@ h3 {
 
 /**************** Navigaton Bar *****************/
 
-.navWrap {
+header {
 	width: 100%;
 	text-align: center;
 	width: 100%;
@@ -171,13 +171,22 @@ h3 {
 	z-index: 99;
 	position: fixed;
 }
-.nav {
+nav {
 	background-color: gray;
 	opacity: 0.8;
 }
 .jumpPoint {
 	margin-top: -90px;
 	padding-top: 90px;
+}
+
+/**************** banner transition  *****************/
+
+h1, nav {
+	transition: all 0.5s ease;
+}
+header {
+	transition: background-color 0.5s ease;
 }
 
 /**************** tear icons  *****************/
