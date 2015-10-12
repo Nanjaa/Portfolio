@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	// This for loop is to generate all the projects based off the array in projects.js
 	for(i=0; i < projects.length; i++) {
-		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border"><div class="noSelect' + projects[i].class + '"><div class="leftArrow inline"></div><img class="' + projects[i].pictureClass + ' fullPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline"></div></div><div class="padding"><h3>' + projects[i].name + '</h3><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>')
+		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline"></div><img class="' + projects[i].picClass + ' fullPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline"></div></div><div class="padding"><h3>' + projects[i].name + '</h3><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
 	};
 
 	// Reset the go timer so that you can change the time again
@@ -126,7 +126,7 @@ $(document).ready(function() {
 	var wait = setTimeout(function() {
 		sunset();
 	}, 3000);
-	// If you click the button before the sun automatically sets, it'll stop the automation
+	// If you click the button before the sun automatically sets, it'll stop the automatic animation
 	$('.icon-sun-3').on('click', function() {
 		clearTimeout(wait);
 		quickSet();
@@ -169,6 +169,7 @@ $(document).ready(function() {
 	$('.rightArrow').on('click', function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
 			if(oshuPicture === 1) {
+				console.log('oh hello you');
 				oshuPicture = 2;
 				$('.oshuPreview').attr('src', 'images/oshu2.png');
 				$('.leftArrow').css('border-right', '25px solid #d6eaf3');
