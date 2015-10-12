@@ -234,8 +234,6 @@ $(document).ready(function() {
 	var size1 = $('h1').css('font-size'),
 		sizeChange = ((size1.slice(0, -2)) * 0.75);
 		size2 = sizeChange + "px";
-	console.log(size1);
-	console.log(size2);
 
 	function navScroll(scroll, height) {
 		$('header').css('top', Math.max(0, 275 - scroll));

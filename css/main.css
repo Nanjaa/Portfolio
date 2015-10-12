@@ -291,6 +291,9 @@ header {
 	border-bottom: 25px solid transparent;
 	cursor: pointer;
 }
+.projectTools {
+	font-weight: bold;
+}
 .bigPicture {
 	display: none;
 	position: fixed;
