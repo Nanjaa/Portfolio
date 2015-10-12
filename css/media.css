@@ -6,8 +6,10 @@
 	}
 
 }
-@media only screen and (min-width: 480px) {
-
+@media only screen and (min-width: 650px) {
+	.star4 {
+		left: 35%;
+	}
 }
 @media only screen and (min-width: 780px) {
 	.topLeaves {
@@ -15,6 +17,9 @@
 
 	.stream {
 		left: 5%;
+	}
+	.star4 {
+		left: 30%;
 	}
 }
 @media only screen and (min-width: 992px) {
@@ -34,12 +39,20 @@
 	.projectSlideshow {
 		float: left;
 	}
+	.star4 {
+		left: 25%;
+	}
 }
 @media only screen and (min-width: 1200px) {
 	.topLeaves {
 	}
 	.stream {
 		left: 25%;
+	}
+}
+@media only screen and (min-width: 1450px) {
+	.star4 {
+		left: 17%;
 	}
 }
 @media only screen and (min-width: 1550px) {
