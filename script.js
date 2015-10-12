@@ -2,6 +2,11 @@ $(document).ready(function() {
 	// If you refresh, scroll back to the top
 	$(this).scrollTop(0);
 
+	// This for loop is to generate all the projects based off the array in projects.js
+	for(i=0; i < projects.length; i++) {
+		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border"><div class="noSelect' + projects[i].class + '"><div class="leftArrow inline"></div><img class="' + projects[i].pictureClass + ' fullPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline"></div></div><div class="padding"><h3>' + projects[i].name + '</h3><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>')
+	};
+
 	// Reset the go timer so that you can change the time again
 	function waitToGo(timeout) {
 		var wait4 = setTimeout(function() {
@@ -224,7 +229,5 @@ $(document).ready(function() {
 		}, 500);
 		return false;
 	});
-
-	console.log(projects.length);
 
 });
