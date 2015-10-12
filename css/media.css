@@ -10,6 +10,9 @@
 	.star4 {
 		left: 35%;
 	}
+	h1 {
+		font-size: 7rem;
+	}
 }
 @media only screen and (min-width: 780px) {
 	.topLeaves {

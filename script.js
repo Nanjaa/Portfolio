@@ -231,19 +231,24 @@ $(document).ready(function() {
 		// This beginning function acts as a media query, determining where the navbar rests at the beginning 
 		navScroll(scroll, myHeight);
 	});
+	var size1 = $('h1').css('font-size'),
+		sizeChange = ((size1.slice(0, -2)) * 0.75);
+		size2 = sizeChange + "px";
+	console.log(size1);
+	console.log(size2);
 
 	function navScroll(scroll, height) {
 		$('header').css('top', Math.max(0, 275 - scroll));
 		if(scroll > 275) {
 			$('nav').css('opacity', '1');
 			$('header').css('background-color', 'gray');
-			$('h1').css('font-size', '4rem');
+			$('h1').css('font-size', size2);
 			$('h1').css('margin-bottom', '0');
 		}
 		else if(scroll < 275) {
 			$('nav').css('opacity', '0.8');
 			$('header').css('background-color', 'transparent');
-			$('h1').css('font-size', '5rem');
+			$('h1').css('font-size', size1);
 			$('h1').css('margin-bottom', '2rem');
 		}
 	}
