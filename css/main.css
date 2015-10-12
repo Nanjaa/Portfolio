@@ -291,6 +291,7 @@ header {
 
 .contactWrap {
 	background-color: #2faa19;
+	height: 100vh;
 }
 .leafBody {
 	width: 50px;

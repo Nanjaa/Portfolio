@@ -169,7 +169,6 @@ $(document).ready(function() {
 	$('.rightArrow').on('click', function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
 			if(oshuPicture === 1) {
-				console.log('oh hello you');
 				oshuPicture = 2;
 				$('.oshuPreview').attr('src', 'images/oshu2.png');
 				$('.oshuLeft').css('border-right', '25px solid #d6eaf3');
