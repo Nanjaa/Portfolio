@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	// This for loop is to generate all the projects based off the array in projects.js
 	for(i=0; i < projects.length; i++) {
-		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' fullPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div class="padding"><h3>' + projects[i].name + '</h3><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
+		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div><div class="project border"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' fullPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div class="padding"><h3>' + projects[i].name + '</h3><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
 	};
 
 	// Reset the go timer so that you can change the time again
