@@ -25,10 +25,16 @@ html, body {
 .inline {
 	display: inline-block;
 }
+.borderBox {
+	box-sizing: border-box;
+}
 .circle {
 	border-radius: 50%;
 	background-color: white;
 	box-shadow: 0 0 15px 1px white;
+}
+img {
+	width: 100%;
 }
 .noSelect {
 	-webkit-touch-callout: none;
@@ -60,7 +66,7 @@ i {
 /* Fonts */
 
 h1 {
-	font-family: 'Julius Sans One', sans-serif;
+	font-family: 'PT Sans Narrow', sans-serif;
 	text-shadow: #7c7c7c 0 0 5px;
 	font-size: 5rem;
 	cursor: pointer;
@@ -81,7 +87,6 @@ h3 {
 /**************** THE BUTTON TO CHANGE THE TIME *****************/
 
 .changeTime {
-	box-sizing: border-box;
 	width: 60px;
 	height: 60px;
 	padding: 6px;
@@ -94,7 +99,6 @@ h3 {
 	border: 2px solid white;
 }
 .iconWrap {
-	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
 	background-color: #6dd6f6;
@@ -286,6 +290,21 @@ header {
 	border-left: 25px solid #d6eaf3;
 	border-bottom: 25px solid transparent;
 	cursor: pointer;
+}
+.bigPicture {
+	display: none;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	padding-top: 5%;
+	z-index: 1000;
+	background-color: black;
+}
+.enlargedPic {
+	width: 85%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /**************** CONTACT ME WRAP  *****************/

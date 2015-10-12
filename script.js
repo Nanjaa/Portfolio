@@ -137,62 +137,90 @@ $(document).ready(function() {
 	var oshuPicture = 1,
 		marvelPicture = 1;
 
+	// These are the functions that will be used if you click left or swipe
+	function leftOshu() {
+		if(oshuPicture === 2) {
+			oshuPicture = 1;
+			$('.oshuPreview').attr('src', 'images/oshu1.png');
+			$('.oshuLeft').css('border-right', '25px solid #85c0dc');
+		}
+		else if(oshuPicture === 3) {
+			oshuPicture = 2;
+			$('.oshuPreview').attr('src', 'images/oshu2.png');
+			$('.oshuRight').css('border-left', '25px solid #d6eaf3');
+		}
+	}
+	function leftMarvel() {
+		if(marvelPicture === 2) {
+			marvelPicture = 1;
+			$('.marvelPreview').attr('src', 'images/marvel1.png');
+			$('.marvelLeft').css('border-right', '25px solid #85c0dc');
+		}
+		else if(marvelPicture === 3) {
+			marvelPicture = 2;
+			$('.marvelPreview').attr('src', 'images/marvel2.png');
+			$('.marvelRight').css('border-left', '25px solid #d6eaf3');
+		}
+	}
+	function rightOshu() {
+		if(oshuPicture === 1) {
+			oshuPicture = 2;
+			$('.oshuPreview').attr('src', 'images/oshu2.png');
+			$('.oshuLeft').css('border-right', '25px solid #d6eaf3');
+		}
+		else if(oshuPicture === 2) {
+			oshuPicture = 3;
+			$('.oshuPreview').attr('src', 'images/oshu3.png');
+			$('.oshuRight').css('border-left', '25px solid #85c0dc');
+		}
+	}
+	function rightMarvel() {
+		if(marvelPicture === 1) {
+			marvelPicture = 2;
+			$('.marvelPreview').attr('src', 'images/marvel2.png');
+			$('.marvelLeft').css('border-right', '25px solid #d6eaf3');
+		}
+		else if(marvelPicture === 2) {
+			marvelPicture = 3;
+			$('.marvelPreview').attr('src', 'images/marvel3.png');
+			$('.marvelRight').css('border-left', '25px solid #85c0dc');
+		}
+	}
+
 	// click the left arrow (if it's available)
 	$('.leftArrow').on('click', function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
-			if(oshuPicture === 2) {
-				oshuPicture = 1;
-				$('.oshuPreview').attr('src', 'images/oshu1.png');
-				$('.oshuLeft').css('border-right', '25px solid #85c0dc');
-			}
-			else if(oshuPicture === 3) {
-				oshuPicture = 2;
-				$('.oshuPreview').attr('src', 'images/oshu2.png');
-				$('.oshuRight').css('border-left', '25px solid #d6eaf3');
-			}
-
+			leftOshu();
 		}
 		else {
-			if(marvelPicture === 2) {
-				marvelPicture = 1;
-				$('.marvelPreview').attr('src', 'images/marvel1.png');
-				$('.marvelLeft').css('border-right', '25px solid #85c0dc');
-			}
-			else if(marvelPicture === 3) {
-				marvelPicture = 2;
-				$('.marvelPreview').attr('src', 'images/marvel2.png');
-				$('.marvelRight').css('border-left', '25px solid #d6eaf3');
-			}
+			leftMarvel();
 		}
 	})
 	// click the right arrow (if it's available)
 	$('.rightArrow').on('click', function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
-			if(oshuPicture === 1) {
-				oshuPicture = 2;
-				$('.oshuPreview').attr('src', 'images/oshu2.png');
-				$('.oshuLeft').css('border-right', '25px solid #d6eaf3');
-			}
-			else if(oshuPicture === 2) {
-				oshuPicture = 3;
-				$('.oshuPreview').attr('src', 'images/oshu3.png');
-				$('.oshuRight').css('border-left', '25px solid #85c0dc');
-			}
-
+			rightOshu();
 		}
 		else {
-			if(marvelPicture === 1) {
-				marvelPicture = 2;
-				$('.marvelPreview').attr('src', 'images/marvel2.png');
-				$('.marvelLeft').css('border-right', '25px solid #d6eaf3');
-			}
-			else if(marvelPicture === 2) {
-				marvelPicture = 3;
-				$('.marvelPreview').attr('src', 'images/marvel3.png');
-				$('.marvelRight').css('border-left', '25px solid #85c0dc');
-			}
+			rightMarvel();
 		}
 	})
+
+	// swipe the preview picture
+	// oshu
+	$('.oshuPreview').on('swipeleft', function() {
+		leftOshu();
+	});
+	$('.oshuPreview').on('swiperight', function() {
+		rightOshu();
+	});
+	// marvel
+	$('.marvelPreview').on('swipeleft', function() {
+		leftMarvel();
+	});
+	$('.marvelPreview').on('swiperight', function() {
+		rightMarvel();
+	});
 
 	// This is the function where the nameplate becomes the header
 
