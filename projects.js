@@ -7,7 +7,9 @@ var projects = [
 		tools: "Javascript jQuery HTML5 CSS3 Skeleton",
 		pic1: "images/oshu1.png",
 		pic2: "images/oshu2.png",
-		pic3: "images/oshu3.png"
+		pic3: "images/oshu3.png",
+		left: "oshuLeft",
+		right: "oshuRight"
 	},
 	{
 		class: "marvel",
@@ -17,6 +19,8 @@ var projects = [
 		tools: "Javascript jQuery HTML5 CSS3 Skeleton",
 		pic1: "images/marvel1.png",
 		pic2: "images/marvel2.png",
-		pic3: "images/marvel3.png"
+		pic3: "images/marvel3.png",
+		left: "marvelLeft",
+		right: "marvelRight"
 	}
 ]
