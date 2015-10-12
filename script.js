@@ -229,4 +229,13 @@ $(document).ready(function() {
 		return false;
 	});
 
+	// This is for when you click the header to return to the top of the page
+
+	$('h1').on('click', function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 500);
+		return false;
+	});
+
 });
