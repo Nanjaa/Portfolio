@@ -199,21 +199,20 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 		// variables that will be used throughout this function
 		var scroll = $(this).scrollTop(),
-			myHeight = $(window).height(),
-			minimize = myHeight - 90;
+			myHeight = $(window).height();
 		// This beginning function acts as a media query, determining where the navbar rests at the beginning 
-		navScroll(scroll, myHeight, minimize);
+		navScroll(scroll, myHeight);
 	});
 
-	function navScroll(scroll, height, minimize) {
+	function navScroll(scroll, height) {
 		$('header').css('top', Math.max(0, 275 - scroll));
-		if(scroll > minimize) {
+		if(scroll > 275) {
 			$('nav').css('opacity', '1');
 			$('header').css('background-color', 'gray');
 			$('h1').css('font-size', '4rem');
 			$('h1').css('margin-bottom', '0');
 		}
-		else if(scroll < minimize) {
+		else if(scroll < 275) {
 			$('nav').css('opacity', '0.8');
 			$('header').css('background-color', 'transparent');
 			$('h1').css('font-size', '5rem');

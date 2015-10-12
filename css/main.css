@@ -63,6 +63,7 @@ h1 {
 	font-family: 'Julius Sans One', sans-serif;
 	text-shadow: #7c7c7c 0 0 5px;
 	font-size: 5rem;
+	cursor: pointer;
 }
 a {
 	font-family: 'Pompiere', cursive;
