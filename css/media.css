@@ -1,5 +1,8 @@
 @media only screen and (min-width: 360px) {
-
+	.headerLink {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 }
 @media only screen and (min-width: 480px) {
 	.topLeaves {
