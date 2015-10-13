@@ -11,7 +11,7 @@
 	position: fixed;
 }
 .padding {
-	padding: 15px;
+	padding: 20px;
 }
 html, body {
 	height: 100%;
@@ -315,7 +315,7 @@ header {
 
 .contactWrap {
 	background-color: #2faa19;
-	height: 100vh;
+	height: calc(100vh - 90px);
 }
 .leafBody {
 	width: 50px;
