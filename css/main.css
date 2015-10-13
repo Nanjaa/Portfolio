@@ -288,6 +288,9 @@ header {
 	border-bottom: 25px solid transparent;
 	cursor: pointer;
 }
+.marvelRight {
+	border-left: 25px solid #85c0dc;
+}
 .projectTools {
 	font-weight: bold;
 }

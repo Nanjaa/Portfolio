@@ -18,8 +18,6 @@ var projects = [
 		desc: "This web application uses the Marvel API. It allows you to search for Marvel comic series, and uses get requests to return more details about the searched series. From there, you may choose to save the series to your local storage, and the site will keep a calendar for you, which tracks the dates of upcoming releases.",
 		tools: "Javascript | jQuery | HTML5 | CSS3 | Skeleton",
 		pic1: "images/marvel1.png",
-		pic2: "images/marvel2.png",
-		pic3: "images/marvel3.png",
 		left: "marvelLeft",
 		right: "marvelRight"
 	}

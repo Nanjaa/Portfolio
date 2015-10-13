@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	// This for loop is to generate all the projects based off the array in projects.js
 	for(i=0; i < projects.length; i++) {
-		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div><div class="project border"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' fullPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div class="padding"><h3>' + projects[i].name + '</h3><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
+		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' fullPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div class="padding"><h3>' + projects[i].name + '</h3><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
 	};
 
 	// Reset the go timer so that you can change the time again
@@ -150,18 +150,21 @@ $(document).ready(function() {
 			$('.oshuRight').css('border-left', '25px solid #d6eaf3');
 		}
 	}
-	function leftMarvel() {
-		if(marvelPicture === 2) {
-			marvelPicture = 1;
-			$('.marvelPreview').attr('src', 'images/marvel1.png');
-			$('.marvelLeft').css('border-right', '25px solid #85c0dc');
-		}
-		else if(marvelPicture === 3) {
-			marvelPicture = 2;
-			$('.marvelPreview').attr('src', 'images/marvel2.png');
-			$('.marvelRight').css('border-left', '25px solid #d6eaf3');
-		}
-	}
+
+	// THE MARVEL API HAS BEEN DOWN FOR A FEW DAYS, AND I HAVEN'T BEEN ABLE TO TAKE ANY MORE PICTURES
+
+	// function leftMarvel() {
+	// 	if(marvelPicture === 2) {
+	// 		marvelPicture = 1;
+	// 		$('.marvelPreview').attr('src', 'images/marvel1.png');
+	// 		$('.marvelLeft').css('border-right', '25px solid #85c0dc');
+	// 	}
+	// 	else if(marvelPicture === 3) {
+	// 		marvelPicture = 2;
+	// 		$('.marvelPreview').attr('src', 'images/marvel2.png');
+	// 		$('.marvelRight').css('border-left', '25px solid #d6eaf3');
+	// 	}
+	// }
 	function rightOshu() {
 		if(oshuPicture === 1) {
 			oshuPicture = 2;
@@ -174,36 +177,39 @@ $(document).ready(function() {
 			$('.oshuRight').css('border-left', '25px solid #85c0dc');
 		}
 	}
-	function rightMarvel() {
-		if(marvelPicture === 1) {
-			marvelPicture = 2;
-			$('.marvelPreview').attr('src', 'images/marvel2.png');
-			$('.marvelLeft').css('border-right', '25px solid #d6eaf3');
-		}
-		else if(marvelPicture === 2) {
-			marvelPicture = 3;
-			$('.marvelPreview').attr('src', 'images/marvel3.png');
-			$('.marvelRight').css('border-left', '25px solid #85c0dc');
-		}
-	}
+
+	// THE MARVEL API HAS BEEN DOWN FOR A FEW DAYS, AND I HAVEN'T BEEN ABLE TO TAKE ANY MORE PICTURES
+
+	// function rightMarvel() {
+	// 	if(marvelPicture === 1) {
+	// 		marvelPicture = 2;
+	// 		$('.marvelPreview').attr('src', 'images/marvel2.png');
+	// 		$('.marvelLeft').css('border-right', '25px solid #d6eaf3');
+	// 	}
+	// 	else if(marvelPicture === 2) {
+	// 		marvelPicture = 3;
+	// 		$('.marvelPreview').attr('src', 'images/marvel3.png');
+	// 		$('.marvelRight').css('border-left', '25px solid #85c0dc');
+	// 	}
+	// }
 
 	// click the left arrow (if it's available)
 	$('.leftArrow').on('click', function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
 			leftOshu();
 		}
-		else {
-			leftMarvel();
-		}
+		// else {
+		// 	leftMarvel();
+		// }
 	})
 	// click the right arrow (if it's available)
 	$('.rightArrow').on('click', function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
 			rightOshu();
 		}
-		else {
-			rightMarvel();
-		}
+		// else {
+		// 	rightMarvel();
+		// }
 	})
 
 	// swipe the preview picture
@@ -215,12 +221,12 @@ $(document).ready(function() {
 		rightOshu();
 	});
 	// marvel
-	$('.marvelPreview').on('swipeleft', function() {
-		leftMarvel();
-	});
-	$('.marvelPreview').on('swiperight', function() {
-		rightMarvel();
-	});
+	// $('.marvelPreview').on('swipeleft', function() {
+	// 	leftMarvel();
+	// });
+	// $('.marvelPreview').on('swiperight', function() {
+	// 	rightMarvel();
+	// });
 
 	// This is the function where the nameplate becomes the header
 
