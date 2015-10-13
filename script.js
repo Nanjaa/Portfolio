@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	// This for loop is to generate all the projects based off the array in projects.js
 	for(i=0; i < projects.length; i++) {
-		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border padding"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' fullPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a href="' + projects[i].link + '" target="_blank"><h3>' + projects[i].name + '</h3></a><a href="' + projects[i].link + '" target="_blank"><i class="icon-picture"></i></a></a><a href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
+		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border padding"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' previewPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a href="' + projects[i].link + '" target="_blank"><h3>' + projects[i].name + '</h3></a><a href="' + projects[i].link + '" target="_blank"><i class="icon-picture"></i></a></a><a href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
 	};
 
 	// Reset the go timer so that you can change the time again
@@ -49,7 +49,7 @@ $(document).ready(function() {
 				var wait2 = setTimeout(function() {
 					sunrise();
 				}, 10000);	
-				// If you click the button to semi-permanently change the time, it will stop the timer
+				// If you click the button to semi-permantly change the time, it will stop the timer
 				$('.icon-moon-2').on('click', function() {
 					clearTimeout(wait2);
 					quickRise();
@@ -227,6 +227,37 @@ $(document).ready(function() {
 	// $('.marvelPreview').on('swiperight', function() {
 	// 	rightMarvel();
 	// });
+	
+	// This variable will be used shortly
+	var exit = true;
+	// Click on the preview picture to enlarge it
+	$('.previewPic').on('click', function() {
+		$('.enlargedSrc').attr('src', $(this).attr('src'));
+		$('.bigPicture').fadeIn();
+		// Click outside of the enlarged picture to close it
+		var waitToClick = setTimeout(function() {
+			exit = true;
+			$(document).on('click', function(e) {
+				var target = e.target;
+				if($(target).is('.enlargedSrc')) {
+					console.log('do nothing');
+				}
+				else if(exit) {
+					exit = false;
+					$('.bigPicture').fadeOut();
+					clearTimeout(waitToClick);
+				}
+			});		
+		}, 100);
+	});
+
+		// console.log($(e.target));
+		// if($(e.target).attr('class') === ('.enlargedSrc')) {
+		// 	console.log('it is');
+		// }
+		// else {
+		// 	console.log('it isnt');
+		// }
 
 	// This is the function where the nameplate becomes the header
 

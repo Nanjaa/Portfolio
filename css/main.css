@@ -33,6 +33,9 @@ html, body {
 	background-color: white;
 	box-shadow: 0 0 15px 1px white;
 }
+.floatRight {
+	float: right;
+}
 img {
 	width: 100%;
 }
@@ -264,10 +267,11 @@ header {
 	margin-bottom: 25px;
 	background-color: #5cabd0;
 }
-.fullPic {
+.previewPic {
 	width: 50%;
 	height: auto;
 	border-bottom: 1px solid black;
+	cursor: pointer;
 }
 .opaqueOverlay {
 	opacity: 0.2;
@@ -296,15 +300,15 @@ header {
 	font-weight: bold;
 }
 .bigPicture {
+	background-color: rgba(39, 40, 34, 0.8);
 	display: none;
 	position: fixed;
 	height: 100vh;
 	width: 100%;
-	padding-top: 5%;
 	z-index: 1000;
-	background-color: black;
 }
 .enlargedPic {
+	margin-top: 5%;
 	width: 85%;
 	height: auto;
 	margin-left: auto;
