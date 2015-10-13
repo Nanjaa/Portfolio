@@ -184,6 +184,10 @@ nav {
 	margin-top: -90px;
 	padding-top: 90px;
 }
+.headerLink {
+	margin-left: 10px;
+	margin-right: 10px;
+}
 
 /**************** banner transition  *****************/
 
