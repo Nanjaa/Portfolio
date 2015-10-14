@@ -137,7 +137,7 @@ $(document).ready(function() {
 	var oshuPicture = 1,
 		marvelPicture = 1;
 
-	// These are the functions that will be used if you click left or swipe
+	// These are the functions that will be used if you click left
 	function leftOshu() {
 		if(oshuPicture === 2) {
 			oshuPicture = 1;
@@ -210,23 +210,7 @@ $(document).ready(function() {
 		// else {
 		// 	rightMarvel();
 		// }
-	})
-
-	// swipe the preview picture
-	// oshu
-	$('.oshuPreview').on('swipeleft', function() {
-		leftOshu();
 	});
-	$('.oshuPreview').on('swiperight', function() {
-		rightOshu();
-	});
-	// marvel
-	// $('.marvelPreview').on('swipeleft', function() {
-	// 	leftMarvel();
-	// });
-	// $('.marvelPreview').on('swiperight', function() {
-	// 	rightMarvel();
-	// });
 	
 	// This variable will be used shortly
 	var exit = true;
