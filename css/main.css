@@ -268,10 +268,12 @@ header {
 	background-color: #5cabd0;
 }
 .previewPic {
-	width: 50%;
+	width: 100%;
 	height: auto;
 	border: 1px solid black;
 	cursor: pointer;
+	float: right;
+
 }
 .opaqueOverlay {
 	opacity: 0.2;
@@ -284,6 +286,7 @@ header {
 	border-right: 25px solid #85c0dc;
 	border-bottom: 25px solid transparent;
 	cursor: pointer;
+	margin-right: 10px;
 }
 .rightArrow {
 	width: 0;
@@ -292,6 +295,7 @@ header {
 	border-left: 25px solid #d6eaf3;
 	border-bottom: 25px solid transparent;
 	cursor: pointer;
+	margin-left: 10px;
 }
 .marvelRight {
 	border-left: 25px solid #85c0dc;

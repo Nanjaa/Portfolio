@@ -16,6 +16,10 @@
 	h1 {
 		font-size: 7rem;
 	}
+	.previewPic {
+		float: none;
+		width: 75%;
+	}
 }
 @media only screen and (min-width: 780px) {
 	.topLeaves {
@@ -54,6 +58,9 @@
 	}
 	.stream {
 		left: 25%;
+	}
+	.previewPic {
+		width: 50%;
 	}
 }
 @media only screen and (min-width: 1450px) {
