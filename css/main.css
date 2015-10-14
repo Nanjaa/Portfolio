@@ -53,12 +53,10 @@ a {
 	text-decoration: none;
 	margin-left: 5px;
 	margin-right: 5px;
-	transition: all .2s ease-in-out;
 	outline: 0;
 }
 a:hover {
 	color: #fffabe;
-	transform: scale(20);
 }
 i {
 	z-index: 999;

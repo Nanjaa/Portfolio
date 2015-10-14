@@ -1,6 +1,9 @@
 $(document).ready(function() {
 	// If you refresh, scroll back to the top
-	$(this).scrollTop(0);
+	// $(document, window).scrollTop(0);
+	$('html, body').animate({
+		scrollTop: 0
+	}, 500);
 
 	// This for loop is to generate all the projects based off the array in projects.js
 	for(i=0; i < projects.length; i++) {
@@ -214,7 +217,6 @@ $(document).ready(function() {
 	
 	// This variable will be used shortly
 	var exit = true;
-	console.log($(document).width())
 	// Click on the preview picture to enlarge it
 	$('.previewPic').on('click', function() {
 		if($(document).width() > 780) {
@@ -226,7 +228,6 @@ $(document).ready(function() {
 				$(document).on('click', function(e) {
 					var target = e.target;
 					if($(target).is('.enlargedSrc')) {
-						console.log('do nothing');
 					}
 					else if(exit) {
 						exit = false;
@@ -237,14 +238,6 @@ $(document).ready(function() {
 			}, 100);			
 		}
 	});
-
-		// console.log($(e.target));
-		// if($(e.target).attr('class') === ('.enlargedSrc')) {
-		// 	console.log('it is');
-		// }
-		// else {
-		// 	console.log('it isnt');
-		// }
 
 	// This is the function where the nameplate becomes the header
 
