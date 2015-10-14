@@ -297,6 +297,9 @@ header {
 .marvelRight {
 	border-left: 25px solid #85c0dc;
 }
+.marvelLeft, .marvelRight {
+	display: none;
+}
 .projectTools {
 	font-weight: bold;
 }
