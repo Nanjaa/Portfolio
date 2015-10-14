@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	// This for loop is to generate all the projects based off the array in projects.js
 	for(i=0; i < projects.length; i++) {
-		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border padding"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' previewPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a href="' + projects[i].link + '" target="_blank"><h3>' + projects[i].name + '</h3></a><a href="' + projects[i].link + '" target="_blank"><i class="icon-picture"></i></a></a><a href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
+		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border padding"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' previewPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a title="Visit Site" href="' + projects[i].link + '" target="_blank"><h3>' + projects[i].name + '</h3></a><a title="Visit Site" href="' + projects[i].link + '" target="_blank"><i class="icon-picture"></i></a></a><a title="Visit Github" href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
 	};
 
 	// Reset the go timer so that you can change the time again
@@ -141,12 +141,12 @@ $(document).ready(function() {
 	function leftOshu() {
 		if(oshuPicture === 2) {
 			oshuPicture = 1;
-			$('.oshuPreview').attr('src', 'images/oshu1.png');
+			$('.oshuPreview').hide().attr('src', 'images/oshu1.png').fadeIn(350);
 			$('.oshuLeft').css('border-right', '25px solid #85c0dc');
 		}
 		else if(oshuPicture === 3) {
 			oshuPicture = 2;
-			$('.oshuPreview').attr('src', 'images/oshu2.png');
+			$('.oshuPreview').hide().attr('src', 'images/oshu2.png').fadeIn(350);
 			$('.oshuRight').css('border-left', '25px solid #d6eaf3');
 		}
 	}
@@ -168,12 +168,12 @@ $(document).ready(function() {
 	function rightOshu() {
 		if(oshuPicture === 1) {
 			oshuPicture = 2;
-			$('.oshuPreview').attr('src', 'images/oshu2.png');
+			$('.oshuPreview').hide().attr('src', 'images/oshu2.png').fadeIn(350);
 			$('.oshuLeft').css('border-right', '25px solid #d6eaf3');
 		}
 		else if(oshuPicture === 2) {
 			oshuPicture = 3;
-			$('.oshuPreview').attr('src', 'images/oshu3.png');
+			$('.oshuPreview').hide().attr('src', 'images/oshu3.png').fadeIn(350);
 			$('.oshuRight').css('border-left', '25px solid #85c0dc');
 		}
 	}
@@ -233,7 +233,7 @@ $(document).ready(function() {
 	// Click on the preview picture to enlarge it
 	$('.previewPic').on('click', function() {
 		$('.enlargedSrc').attr('src', $(this).attr('src'));
-		$('.bigPicture').fadeIn();
+		$('.shadowbox').fadeIn();
 		// Click outside of the enlarged picture to close it
 		var waitToClick = setTimeout(function() {
 			exit = true;
@@ -244,7 +244,7 @@ $(document).ready(function() {
 				}
 				else if(exit) {
 					exit = false;
-					$('.bigPicture').fadeOut();
+					$('.shadowbox').fadeOut();
 					clearTimeout(waitToClick);
 				}
 			});		

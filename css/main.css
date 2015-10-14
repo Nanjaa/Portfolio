@@ -270,7 +270,7 @@ header {
 .previewPic {
 	width: 50%;
 	height: auto;
-	border-bottom: 1px solid black;
+	border: 1px solid black;
 	cursor: pointer;
 }
 .opaqueOverlay {
@@ -299,20 +299,30 @@ header {
 .projectTools {
 	font-weight: bold;
 }
-.bigPicture {
+.shadowbox {
 	background-color: rgba(39, 40, 34, 0.8);
 	display: none;
 	position: fixed;
 	height: 100vh;
 	width: 100%;
 	z-index: 1000;
+	text-align: center;
+	vertical-align: middle;
+}
+.shadowbox::before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
 .enlargedPic {
-	margin-top: 5%;
-	width: 85%;
+	max-width: 80%;
 	height: auto;
-	margin-left: auto;
-	margin-right: auto;
+	border: 5px solid black;
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 /**************** CONTACT ME WRAP  *****************/
