@@ -31,6 +31,9 @@
 	.star4 {
 		left: 30%;
 	}
+	.previewPic {
+		cursor: pointer;
+	}
 }
 @media only screen and (min-width: 992px) {
 	.topLeaves {
@@ -41,7 +44,7 @@
 	.tree2 {
 		display: block;
 	}
-	.fullPic {
+	.previewPic {
 		width: 50%;
 		margin: 25px;
 		border: 1px solid black;

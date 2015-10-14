@@ -217,7 +217,7 @@ $(document).ready(function() {
 	console.log($(document).width())
 	// Click on the preview picture to enlarge it
 	$('.previewPic').on('click', function() {
-		if($(document).width() > 990) {
+		if($(document).width() > 780) {
 			$('.enlargedSrc').attr('src', $(this).attr('src'));
 			$('.shadowbox').fadeIn();
 			// Click outside of the enlarged picture to close it

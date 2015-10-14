@@ -271,7 +271,6 @@ header {
 	width: 100%;
 	height: auto;
 	border: 1px solid black;
-	cursor: pointer;
 	float: right;
 
 }
@@ -316,7 +315,6 @@ header {
 .shadowbox::before {
 	content: "";
 	display: inline-block;
-	height: 100%;
 	vertical-align: middle;
 }
 .enlargedPic {
