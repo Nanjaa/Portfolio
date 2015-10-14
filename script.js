@@ -214,25 +214,28 @@ $(document).ready(function() {
 	
 	// This variable will be used shortly
 	var exit = true;
+	console.log($(document).width())
 	// Click on the preview picture to enlarge it
 	$('.previewPic').on('click', function() {
-		$('.enlargedSrc').attr('src', $(this).attr('src'));
-		$('.shadowbox').fadeIn();
-		// Click outside of the enlarged picture to close it
-		var waitToClick = setTimeout(function() {
-			exit = true;
-			$(document).on('click', function(e) {
-				var target = e.target;
-				if($(target).is('.enlargedSrc')) {
-					console.log('do nothing');
-				}
-				else if(exit) {
-					exit = false;
-					$('.shadowbox').fadeOut();
-					clearTimeout(waitToClick);
-				}
-			});		
-		}, 100);
+		if($(document).width() > 990) {
+			$('.enlargedSrc').attr('src', $(this).attr('src'));
+			$('.shadowbox').fadeIn();
+			// Click outside of the enlarged picture to close it
+			var waitToClick = setTimeout(function() {
+				exit = true;
+				$(document).on('click', function(e) {
+					var target = e.target;
+					if($(target).is('.enlargedSrc')) {
+						console.log('do nothing');
+					}
+					else if(exit) {
+						exit = false;
+						$('.shadowbox').fadeOut();
+						clearTimeout(waitToClick);
+					}
+				});		
+			}, 100);			
+		}
 	});
 
 		// console.log($(e.target));
