@@ -245,28 +245,28 @@ $(document).ready(function() {
 		// variables that will be used throughout this function
 		var scroll = $(this).scrollTop(),
 			myHeight = $(window).height(),
-			size1 = '5rem',
-			size2 = '4rem',
+			size1 = '7rem',
+			size2 = '5rem',
 			headerLocation = '275px';
 		// This beginning function acts as a media query
 		// header height
 		if(($(window).height() < 50)) {
 			console.log('hello');
 		}
-		navScroll(scroll, myHeight);		
+		navScroll(scroll, myHeight, size1, size2);		
 	});
 
-	function navScroll(scroll, height, headerLocation) {
+	function navScroll(scroll, height, size1, size2) {
 		// Variables that will determine the rest of the function
 		// 
-		$('header').css('top', Math.max(0, headerLocation - scroll));
-		if(scroll > headerLocation) {
+		$('header').css('top', Math.max(0, 275 - scroll));
+		if(scroll > 275) {
 			$('nav').css('opacity', '1');
 			$('header').css('background-color', 'gray');
 			$('h1').css('font-size', size2);
 			$('h1').css('margin-bottom', '0');
 		}
-		else if(scroll < headerLocation) {
+		else if(scroll < 275) {
 			$('nav').css('opacity', '0.8');
 			$('header').css('background-color', 'transparent');
 			$('h1').css('font-size', size1);
