@@ -252,7 +252,6 @@ header {
 }
 .project {
 	margin-bottom: 25px;
-	background-color: #5cabd0;
 }
 .previewPic {
 	width: 100%;
@@ -341,13 +340,6 @@ header {
 	margin-top: -50px;
 	border-radius: 50% 50% 0 0;
 	z-index: 1;
-}
-.aboutText {
-	background-color: #fca94a;
-	border: 1px sold black;
-}
-.contactBox {
-	background-color: #58bb46;
 }
 .mediaLink {
 	margin: 0 5px;
