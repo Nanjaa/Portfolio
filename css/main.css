@@ -1,9 +1,8 @@
-.piece {
+.piece,
+.absolute {
 	position: absolute;
 }
-.wrap {
-	position: relative;
-}
+.wrap,
 .relative {
 	position: relative;
 }
@@ -18,9 +17,6 @@ html, body {
 }
 .border {
 	border: 1px solid black;
-}
-.absolute {
-	position: absolute;
 }
 .inline {
 	display: inline-block;
@@ -51,8 +47,7 @@ a {
 	color: white;
 	font-size: 25px;
 	text-decoration: none;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin: 0 5px;
 	outline: 0;
 }
 a:hover {
@@ -72,17 +67,13 @@ h1 {
 	font-size: 5rem;
 	cursor: pointer;
 }
-a {
-	font-family: 'Pompiere', cursive;
-}
-h2 {
+a,
+h2,
+h3 {
 	font-family: 'Pompiere', cursive;
 }
 p {
 	font-family: "Maven Pro",sans-serif;
-}
-h3 {
-	font-family: 'Pompiere', cursive;
 }
 
 /**************** THE BUTTON TO CHANGE THE TIME *****************/
@@ -145,8 +136,7 @@ h3 {
 	height: 100%;
 	border-radius: 50%;
 	box-shadow: 115px 55px 0 0 #3496c5;
-	margin-left: 250px;
-	margin-top: 40px;
+	margin: 250px 0 0 40px;
 	z-index: 0;
 }
 .fire {
@@ -156,8 +146,7 @@ h3 {
 	bottom: 25%;
 }
 .bush1 {
-	margin-left: 450px;
-	margin-top: 150px;
+	margin: 150px 0 0 450px;
 	z-index: 2;
 	display: none;
 }
@@ -361,6 +350,5 @@ header {
 	background-color: #58bb46;
 }
 .mediaLink {
-	margin-right: 5px;
-	margin-left: 5px;
+	margin: 0 5px;
 }
