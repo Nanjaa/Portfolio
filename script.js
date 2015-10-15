@@ -6,7 +6,7 @@ $(document).ready(function() {
 	}, 500);
 
 	// This for loop is to generate all the projects based off the array in projects.js
-	for(i=0; i < projects.length; i++) {
+	for(var i=0; i < projects.length; i++) {
 		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project border padding"><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' previewPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a title="Visit Site" href="' + projects[i].link + '" target="_blank"><h3>' + projects[i].name + '</h3></a><a title="Visit Site" href="' + projects[i].link + '" target="_blank"><i class="icon-picture"></i></a></a><a title="Visit Github" href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
 	};
 
@@ -244,23 +244,29 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 		// variables that will be used throughout this function
 		var scroll = $(this).scrollTop(),
-			myHeight = $(window).height();
-		// This beginning function acts as a media query, determining where the navbar rests at the beginning 
-		navScroll(scroll, myHeight);
+			myHeight = $(window).height(),
+			size1 = '5rem',
+			size2 = '4rem',
+			headerLocation = '275px';
+		// This beginning function acts as a media query
+		// header height
+		if(($(window).height() < 50)) {
+			console.log('hello');
+		}
+		navScroll(scroll, myHeight);		
 	});
-	var size1 = $('h1').css('font-size'),
-		sizeChange = ((size1.slice(0, -2)) * 0.75);
-		size2 = sizeChange + "px";
 
-	function navScroll(scroll, height) {
-		$('header').css('top', Math.max(0, 275 - scroll));
-		if(scroll > 275) {
+	function navScroll(scroll, height, headerLocation) {
+		// Variables that will determine the rest of the function
+		// 
+		$('header').css('top', Math.max(0, headerLocation - scroll));
+		if(scroll > headerLocation) {
 			$('nav').css('opacity', '1');
 			$('header').css('background-color', 'gray');
 			$('h1').css('font-size', size2);
 			$('h1').css('margin-bottom', '0');
 		}
-		else if(scroll < 275) {
+		else if(scroll < headerLocation) {
 			$('nav').css('opacity', '0.8');
 			$('header').css('background-color', 'transparent');
 			$('h1').css('font-size', size1);

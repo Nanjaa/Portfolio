@@ -70,7 +70,7 @@ h1 {
 a,
 h2,
 h3 {
-	font-family: 'Pompiere', cursive;
+	font-family: 'PT Sans', sans-serif;
 }
 p {
 	font-family: "Maven Pro",sans-serif;
@@ -136,7 +136,7 @@ p {
 	height: 100%;
 	border-radius: 50%;
 	box-shadow: 115px 55px 0 0 #3496c5;
-	margin: 250px 0 0 40px;
+	margin: 40px 0 0 250px;
 	z-index: 0;
 }
 .fire {

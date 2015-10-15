@@ -120,3 +120,28 @@
 		display: block;
 	}
 }
+
+/******************** LANDSCAPE QUERIES ********************/
+
+@media only screen and (min-width: 479px) and (orientation: landscape) {
+	.skyWrap, .stars {
+		height: 175px;
+	}
+	.star4, .star20,  .star3, .star10, .star14 {
+		display: none;
+	}
+	header {
+		top: 175px;
+	}
+}
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+	.skyWrap, .stars {
+		height: 240px;
+	}
+	.star4, .star20,  .star3, .star10, .star14 {
+		display: block;
+	}
+	header {
+		top: 275px;
+	}	
+}
