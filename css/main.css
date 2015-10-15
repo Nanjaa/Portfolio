@@ -32,6 +32,9 @@ html, body {
 .floatRight {
 	float: right;
 }
+.underline {
+	text-decoration: underline;
+}
 img {
 	width: 100%;
 }
