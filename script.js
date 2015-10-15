@@ -156,18 +156,18 @@ $(document).ready(function() {
 
 	// THE MARVEL API HAS BEEN DOWN FOR A FEW DAYS, AND I HAVEN'T BEEN ABLE TO TAKE ANY MORE PICTURES
 
-	// function leftMarvel() {
-	// 	if(marvelPicture === 2) {
-	// 		marvelPicture = 1;
-	// 		$('.marvelPreview').attr('src', 'images/marvel1.png');
-	// 		$('.marvelLeft').css('border-right', '25px solid #85c0dc');
-	// 	}
-	// 	else if(marvelPicture === 3) {
-	// 		marvelPicture = 2;
-	// 		$('.marvelPreview').attr('src', 'images/marvel2.png');
-	// 		$('.marvelRight').css('border-left', '25px solid #d6eaf3');
-	// 	}
-	// }
+	function leftMarvel() {
+		if(marvelPicture === 2) {
+			marvelPicture = 1;
+			$('.marvelPreview').hide().attr('src', 'images/marvel1.png').fadeIn(350);
+			$('.marvelLeft').css('border-right', '25px solid #85c0dc');
+		}
+		else if(marvelPicture === 3) {
+			marvelPicture = 2;
+			$('.marvelPreview').hide().attr('src', 'images/marvel2.png').fadeIn(350);
+			$('.marvelRight').css('border-left', '25px solid #d6eaf3');
+		}
+	}
 	function rightOshu() {
 		if(oshuPicture === 1) {
 			oshuPicture = 2;
@@ -183,36 +183,36 @@ $(document).ready(function() {
 
 	// THE MARVEL API HAS BEEN DOWN FOR A FEW DAYS, AND I HAVEN'T BEEN ABLE TO TAKE ANY MORE PICTURES
 
-	// function rightMarvel() {
-	// 	if(marvelPicture === 1) {
-	// 		marvelPicture = 2;
-	// 		$('.marvelPreview').attr('src', 'images/marvel2.png');
-	// 		$('.marvelLeft').css('border-right', '25px solid #d6eaf3');
-	// 	}
-	// 	else if(marvelPicture === 2) {
-	// 		marvelPicture = 3;
-	// 		$('.marvelPreview').attr('src', 'images/marvel3.png');
-	// 		$('.marvelRight').css('border-left', '25px solid #85c0dc');
-	// 	}
-	// }
+	function rightMarvel() {
+		if(marvelPicture === 1) {
+			marvelPicture = 2;
+			$('.marvelPreview').hide().attr('src', 'images/marvel2.png').fadeIn(350);
+			$('.marvelLeft').css('border-right', '25px solid #d6eaf3');
+		}
+		else if(marvelPicture === 2) {
+			marvelPicture = 3;
+			$('.marvelPreview').hide().attr('src', 'images/marvel3.png').fadeIn(350);
+			$('.marvelRight').css('border-left', '25px solid #85c0dc');
+		}
+	}
 
 	// click the left arrow (if it's available)
 	$('.leftArrow').on('click', function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
 			leftOshu();
 		}
-		// else {
-		// 	leftMarvel();
-		// }
+		else {
+			leftMarvel();
+		}
 	})
 	// click the right arrow (if it's available)
 	$('.rightArrow').on('click', function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
 			rightOshu();
 		}
-		// else {
-		// 	rightMarvel();
-		// }
+		else {
+			rightMarvel();
+		}
 	});
 	
 	// This variable will be used shortly
