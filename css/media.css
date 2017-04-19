@@ -46,7 +46,7 @@
 	}
 	.previewPic {
 		width: 50%;
-		margin: 25px;
+		margin: 0 25px 25px 25px;
 		border: 1px solid black;
 	}
 	.projectSlideshow {

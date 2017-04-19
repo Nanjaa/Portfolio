@@ -20,6 +20,7 @@ html, body {
 }
 .inline {
 	display: inline-block;
+	vertical-align: middle;
 }
 .borderBox {
 	box-sizing: border-box;
@@ -47,14 +48,14 @@ img {
 	user-select: none;
 }
 a {
-	color: white;
+	color: black;
 	font-size: 25px;
 	text-decoration: none;
 	margin: 0 5px;
 	outline: 0;
 }
 a:hover {
-	color: #fffabe;
+	color: #2784b1;
 }
 i {
 	z-index: 999;
@@ -138,7 +139,7 @@ p {
 	width: 300px;
 	height: 100%;
 	border-radius: 50%;
-	box-shadow: 115px 55px 0 0 #3496c5;
+	box-shadow: 115px 55px 0 0 #2784B1;
 	margin: 40px 0 0 250px;
 	z-index: 0;
 }
@@ -171,7 +172,7 @@ header {
 	position: fixed;
 }
 nav {
-	background-color: gray;
+	background-color: #feffa4;
 	opacity: 0.8;
 }
 .jumpPoint {
@@ -215,7 +216,7 @@ header {
 /**************** ABOUT ME PAGE  *****************/
 
 .aboutWrap {
-	background-color: #fc941d;
+	background-color: #F7A545;
 }
 .matchFlame1 {
 	width: 40px;
@@ -225,7 +226,7 @@ header {
 .matchFlame2 {
 	width: 25px;
 	height: 25px;
-	background-color: #f1420d;
+	background-color: #E65E14;
 	margin-top: -25px;
 }
 .matchStick {
@@ -236,8 +237,11 @@ header {
 
 /**************** PROJECTS PAGE  *****************/
 
+h3.underline {
+	color: white;
+}
 .projectsWrap {
-	background-color: #3496c5;
+	background-color: #61ABCF;
 }
 .droplet {
 	width: 60px;
@@ -255,6 +259,15 @@ header {
 }
 .project {
 	margin-bottom: 25px;
+}
+.project h3 {
+	margin: 0;
+}
+.project a, .contactWrap a {
+	color: white;
+}
+.project a:hover, .contactWrap a:hover {
+	color: #feffa4;
 }
 .previewPic {
 	width: 100%;
@@ -316,8 +329,7 @@ header {
 /**************** CONTACT ME WRAP  *****************/
 
 .contactWrap {
-	background-color: #2faa19;
-	height: calc(100vh - 90px);
+	background-color: #66b04c;
 }
 .leafBody {
 	width: 50px;

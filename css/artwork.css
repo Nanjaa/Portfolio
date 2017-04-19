@@ -233,12 +233,12 @@
 	height: 0;
 	border-left: 100px solid rgba(255, 255, 255, 0);
 	border-right: 100px solid rgba(255, 255, 255, 0);
-	border-bottom: 50px solid #9a3f18;
+	border-bottom: 50px solid #654627;
 	outline: 1px solid transparent;
 	margin-left: 51px;
 }
 .trunk {
-	background-color: #9a3f18;
+	background-color: #654627;
 	height: 250px;
 	width: 35px;
 	margin-left: 133px;
@@ -249,7 +249,7 @@
 	height: 0;
 	border-left: 150px solid rgba(255, 255, 255, 0);
 	border-right: 150px solid rgba(255, 255, 255, 0);
-	border-bottom: 125px solid #175402;
+	border-bottom: 125px solid #1E550B;
 	outline: 1px solid transparent;
 	margin-bottom: -130px;
 	z-index: -1;
@@ -259,7 +259,7 @@
 	height: 0;
 	border-left: 135px solid rgba(255, 255, 255, 0);
 	border-right: 135px solid rgba(255, 255, 255, 0);
-	border-bottom: 125px solid #127700;
+	border-bottom: 125px solid #297410;
 	outline: 1px solid transparent;
 	margin-left: 15px;
 	margin-bottom: -75px;
@@ -270,7 +270,7 @@
 	height: 0;
 	border-left: 115px solid rgba(255, 255, 255, 0);
 	border-right: 115px solid rgba(255, 255, 255, 0);
-	border-bottom: 125px solid #278c04;
+	border-bottom: 125px solid #349512;
 	outline: 1px solid transparent;
 	margin-left: 35px;
 	margin-bottom: -75px;
@@ -281,7 +281,7 @@
 	height: 0;
 	border-left: 100px solid rgba(255, 255, 255, 0);
 	border-right: 100px solid rgba(255, 255, 255, 0);
-	border-bottom: 125px solid #2faa19;
+	border-bottom: 125px solid #47A426;
 	outline: 1px solid transparent;
 	margin-left: 55px;
 	margin-bottom: -75px;
@@ -449,7 +449,7 @@
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	box-shadow: 15px 15px 0 0 #f1420d;
+	box-shadow: 15px 15px 0 0 #E65E14;
 	margin-bottom: -30px;
 	margin-left: -25px;
 	z-index: -1;

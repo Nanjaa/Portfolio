@@ -7,7 +7,14 @@ $(document).ready(function() {
 
 	// This for loop is to generate all the projects based off the array in projects.js
 	for(var i=0; i < projects.length; i++) {
-		$('.projectsWrap').append('<div class="row projectsRow projectsContent"><div class="container"><div class="project padding"><a title="Visit Site" href="' + projects[i].link + '" target="_blank"><h3 class="underline">' + projects[i].name + '</h3></a><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' previewPic inline" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a title="Visit Site" href="' + projects[i].link + '" target="_blank"><i class="icon-picture"></i></a></a><a title="Visit GitHub" href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>');
+		var projectText = '<div class="row projectsRow projectsContent"><div class="container"><div class="project padding">';
+		if(projects[i].link !== '') {
+			projectText += '<a title="Visit Site" href="' + projects[i].link + '" target="_blank"><h3 class="underline">' + projects[i].name + '</h3></a><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' previewPic inline pic1" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a title="Visit Site" href="' + projects[i].link + '" target="_blank"><i class="icon-picture"></i></a><a title="Visit GitHub" href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>'
+		}
+		else {
+			projectText += '<h3 class="underline">' + projects[i].name + '</h3><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' previewPic inline pic1" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a title="Visit GitHub" href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>'
+		}
+		$('.projectsWrap').append(projectText);
 	};
 
 	// Reset the go timer so that you can change the time again
@@ -128,7 +135,7 @@ $(document).ready(function() {
 	// Starts the time changing functions
 	var wait = setTimeout(function() {
 		sunset();
-	}, 3000);
+	}, 1500);
 	// If you click the button before the sun automatically sets, it'll stop the automatic animation
 	$('.icon-sun-3').on('click', function() {
 		clearTimeout(wait);
@@ -138,61 +145,123 @@ $(document).ready(function() {
 	// scroll through the slideshow
 	// This will keep track of what picture you're on in the slideshow
 	var oshuPicture = 1,
-		marvelPicture = 1;
+		tashaPicture = 1,
+		arPicture = 1;
 
 	// These are the functions that will be used if you click left
+	// oshu (left)
 	function leftOshu() {
 		if(oshuPicture === 2) {
 			oshuPicture = 1;
-			$('.oshuPreview').hide().attr('src', 'images/oshu1.png').fadeIn(350);
+			$('.oshuPreview').fadeOut(100);
 			$('.oshuLeft').css('border-right', '25px solid #85c0dc');
+			setTimeout(function() {
+				$('.oshuPreview').attr('src', 'images/oshu1.png').fadeIn(100);
+			}, 100);
 		}
 		else if(oshuPicture === 3) {
 			oshuPicture = 2;
-			$('.oshuPreview').hide().attr('src', 'images/oshu2.png').fadeIn(350);
+			$('.oshuPreview').fadeOut(100);
 			$('.oshuRight').css('border-left', '25px solid #d6eaf3');
+			setTimeout(function() {
+				$('.oshuPreview').attr('src', 'images/oshu2.png').fadeIn(100);
+			}, 100);
 		}
 	}
-
-	// THE MARVEL API HAS BEEN DOWN FOR A FEW DAYS, AND I HAVEN'T BEEN ABLE TO TAKE ANY MORE PICTURES
-
-	function leftMarvel() {
-		if(marvelPicture === 2) {
-			marvelPicture = 1;
-			$('.marvelPreview').hide().attr('src', 'images/marvel1.png').fadeIn(350);
-			$('.marvelLeft').css('border-right', '25px solid #85c0dc');
+	// archaic rebirth (left)
+	function leftAr() {
+		if(arPicture === 2) {
+			arPicture = 1;
+			$('.arPreview').fadeOut(100);
+			$('.arLeft').css('border-right', '25px solid #85c0dc');
+			setTimeout(function() {
+				$('.arPreview').attr('src', 'images/ar1.png').fadeIn(100);
+			}, 100);
 		}
-		else if(marvelPicture === 3) {
-			marvelPicture = 2;
-			$('.marvelPreview').hide().attr('src', 'images/marvel2.png').fadeIn(350);
-			$('.marvelRight').css('border-left', '25px solid #d6eaf3');
+		else if(arPicture === 3) {
+			arPicture = 2;
+			$('.arPreview').fadeOut(100);
+			$('.arRight').css('border-left', '25px solid #d6eaf3');
+			setTimeout(function() {
+				$('.arPreview').attr('src', 'images/ar2.png').fadeIn(100);
+			}, 100);
 		}
 	}
+	// tasha (left)
+	function leftTasha() {
+		if(tashaPicture === 2) {
+			tashaPicture = 1;
+			$('.tashaPreview').fadeOut(100);
+			$('.tashaLeft').css('border-right', '25px solid #85c0dc');
+			setTimeout(function() {
+				$('.tashaPreview').attr('src', 'images/tasha1.png').fadeIn(100);
+			}, 100);
+		}
+		else if(tashaPicture === 3) {
+			tashaPicture = 2;
+			$('.tashaPreview').fadeOut(100);
+			$('.tashaRight').css('border-left', '25px solid #d6eaf3');
+			setTimeout(function() {
+				$('.tashaPreview').attr('src', 'images/tasha2.png').fadeIn(100);
+			}, 100);
+		}
+	}
+	// These are the functions that will be used if you click right
+	// oshu (right)
 	function rightOshu() {
 		if(oshuPicture === 1) {
 			oshuPicture = 2;
-			$('.oshuPreview').hide().attr('src', 'images/oshu2.png').fadeIn(350);
+			$('.oshuPreview').fadeOut(100);
 			$('.oshuLeft').css('border-right', '25px solid #d6eaf3');
+			setTimeout(function() {
+				$('.oshuPreview').attr('src', 'images/oshu2.png').fadeIn(100);
+			}, 100);
 		}
 		else if(oshuPicture === 2) {
 			oshuPicture = 3;
-			$('.oshuPreview').hide().attr('src', 'images/oshu3.png').fadeIn(350);
+			$('.oshuPreview').fadeOut(100);
 			$('.oshuRight').css('border-left', '25px solid #85c0dc');
+			setTimeout(function() {
+				$('.oshuPreview').attr('src', 'images/oshu3.png').fadeIn(100);
+			}, 100);
 		}
 	}
-
-	// THE MARVEL API HAS BEEN DOWN FOR A FEW DAYS, AND I HAVEN'T BEEN ABLE TO TAKE ANY MORE PICTURES
-
-	function rightMarvel() {
-		if(marvelPicture === 1) {
-			marvelPicture = 2;
-			$('.marvelPreview').hide().attr('src', 'images/marvel2.png').fadeIn(350);
-			$('.marvelLeft').css('border-right', '25px solid #d6eaf3');
+	// archaic rebirth (right)
+	function rightAr() {
+		if(arPicture === 1) {
+			arPicture = 2;
+			$('.arPreview').fadeOut(100);
+			$('.arLeft').css('border-right', '25px solid #d6eaf3');
+			setTimeout(function() {
+				$('.arPreview').attr('src', 'images/ar2.png').fadeIn(100);
+			}, 100);
 		}
-		else if(marvelPicture === 2) {
-			marvelPicture = 3;
-			$('.marvelPreview').hide().attr('src', 'images/marvel3.png').fadeIn(350);
-			$('.marvelRight').css('border-left', '25px solid #85c0dc');
+		else if(arPicture === 2) {
+			arPicture = 3;
+			$('.arPreview').fadeOut(100);
+			$('.arRight').css('border-left', '25px solid #85c0dc');
+			setTimeout(function() {
+				$('.arPreview').attr('src', 'images/ar3.png').fadeIn(100);
+			}, 100);
+		}
+	}
+	// tasha (right)
+	function rightTasha() {
+		if(tashaPicture === 1) {
+			tashaPicture = 2;
+			$('.tashaPreview').fadeOut(100);
+			$('.tashaLeft').css('border-right', '25px solid #d6eaf3');
+			setTimeout(function() {
+				$('.tashaPreview').attr('src', 'images/tasha2.png').fadeIn(100);
+			}, 100);
+		}
+		else if(tashaPicture === 2) {
+			tashaPicture = 3;
+			$('.tashaPreview').fadeOut(100);
+			$('.tashaRight').css('border-left', '25px solid #85c0dc');
+			setTimeout(function() {
+				$('.tashaPreview').attr('src', 'images/tasha3.png').fadeIn(100);
+			}, 100);
 		}
 	}
 
@@ -201,8 +270,11 @@ $(document).ready(function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
 			leftOshu();
 		}
+		else if($(this).parent().attr('class') === 'noSelect tasha') {
+			leftTasha();
+		}
 		else {
-			leftMarvel();
+			leftAr();
 		}
 	})
 	// click the right arrow (if it's available)
@@ -210,8 +282,11 @@ $(document).ready(function() {
 		if($(this).parent().attr('class') === 'noSelect oshu') {
 			rightOshu();
 		}
+		else if($(this).parent().attr('class') === 'noSelect tasha') {
+			rightTasha();
+		}
 		else {
-			rightMarvel();
+			rightAr();
 		}
 	});
 	
@@ -262,15 +337,17 @@ $(document).ready(function() {
 		$('header').css('top', Math.max(0, 275 - scroll));
 		if(scroll > 275) {
 			$('nav').css('opacity', '1');
-			$('header').css('background-color', 'gray');
+			$('header').css('background-color', '#feffa4');
 			$('h1').css('font-size', size2);
 			$('h1').css('margin-bottom', '0');
+			$('h1').css('text-shadow', 'none');
 		}
 		else if(scroll < 275) {
 			$('nav').css('opacity', '0.8');
 			$('header').css('background-color', 'transparent');
 			$('h1').css('font-size', size1);
 			$('h1').css('margin-bottom', '2rem');
+			$('h1').css('text-shadow', '0 0 5px #7c7c7c');
 		}
 	}
 
