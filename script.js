@@ -7,13 +7,27 @@ $(document).ready(function() {
 
 	// This for loop is to generate all the projects based off the array in projects.js
 	for(var i=0; i < projects.length; i++) {
-		var projectText = '<div class="row projectsRow projectsContent"><div class="container"><div class="project padding">';
-		if(projects[i].link !== '') {
-			projectText += '<a title="Visit Site" href="' + projects[i].link + '" target="_blank"><h3 class="underline">' + projects[i].name + '</h3></a><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' previewPic inline pic1" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a title="Visit Site" href="' + projects[i].link + '" target="_blank"><i class="icon-picture"></i></a><a title="Visit GitHub" href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>'
+		var projectText = '<div class="row projectsRow projectsContent"><div class="container"><div class="project">';
+
+		if(projects[i].link) {
+			projectText += '<a title="Visit Site" href="' + projects[i].link + '" target="_blank"><h3 class="underline">' + projects[i].name + '</h3></a>';
 		}
 		else {
-			projectText += '<h3 class="underline">' + projects[i].name + '</h3><div class="noSelect ' + projects[i].class + '"><div class="leftArrow inline ' + projects[i].left + '"></div><img class="' + projects[i].picClass + ' previewPic inline pic1" src="' + projects[i].pic1 + '"><div class="rightArrow inline ' + projects[i].right + '"></div></div><div><a title="Visit GitHub" href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a><p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>'
+			projectText += '<h3 class="underline">' + projects[i].name + '</h3>';
 		}
+
+		projectText += '<div class="noSelect padding ' + projects[i].class + '"><img class="previewPic inline pic1" src="' + projects[i].pic + '"></div><div><a title="Visit GitHub" href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a>';
+
+		if (projects[i].link) {
+			projectText += '<a title="Visit Site" href="' + projects[i].link + '" target="_blank"><i class="icon-picture"></i></a><a title="Visit GitHub" href="' + projects[i].git + '" target="_blank"><i class="icon-github-squared"></i></a>';
+		}
+		
+		projectText += '<p>' + projects[i].desc + '</p><p class="projectTools">' + projects[i].tools + '</p></div></div></div></div>';
+
+		if (projects.length > 1 && i !== projects.length - 1) {
+			projectText += '<div class="padding"></div>';
+		}
+
 		$('.projectsWrap').append(projectText);
 	};
 
